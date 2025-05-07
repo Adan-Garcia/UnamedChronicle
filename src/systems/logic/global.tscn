@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://cirj05stuhm24"]
+
+[ext_resource type="Script" uid="uid://ceg75bk50ooxx" path="res://src/scripts/global.gd" id="1_nmxvb"]
+[ext_resource type="PackedScene" uid="uid://dnsc4173kuc87" path="res://src/systems/logic/Worldstate.tscn" id="2_opebo"]
+[ext_resource type="Script" uid="uid://52svm841cmfc" path="res://src/scripts/cord.gd" id="3_opebo"]
+[ext_resource type="Script" uid="uid://bmjwixyrfkaii" path="res://src/scripts/datagraber.gd" id="4_m3l3d"]
+[ext_resource type="Script" uid="uid://b8d1xwaik3pj8" path="res://src/scripts/chatqueue.gd" id="5_nelfd"]
+[ext_resource type="Script" uid="uid://b117ur7llbbhl" path="res://src/scripts/players.gd" id="6_6rlim"]
+
+[node name="Global" type="Node2D"]
+script = ExtResource("1_nmxvb")
+
+[node name="WorldState" parent="." instance=ExtResource("2_opebo")]
+
+[node name="Cord" type="Node" parent="."]
+script = ExtResource("3_opebo")
+
+[node name="Datagraber" type="Node" parent="."]
+script = ExtResource("4_m3l3d")
+
+[node name="chatqueue" type="Node" parent="."]
+script = ExtResource("5_nelfd")
+
+[node name="players" type="Node" parent="."]
+script = ExtResource("6_6rlim")

@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnsc4173kuc87"]
-
-[ext_resource type="Script" uid="uid://85otop3g0ogm" path="res://scripts/WorldManager.gd" id="1_imk6d"]
-
-[node name="Node" type="Node"]
-script = ExtResource("1_imk6d")
