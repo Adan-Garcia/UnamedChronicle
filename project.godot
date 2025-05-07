@@ -1,0 +1,51 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="AI"
+run/main_scene="uid://br0qdo5b6l08s"
+config/features=PackedStringArray("4.4")
+run/low_processor_mode=true
+config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scenes/global.tscn"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/vsync/vsync_mode=0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/beautify_code_on_save/plugin.cfg", "res://addons/theme_gen_save_sync/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://AI/": "purple",
+"res://Resources/": "pink",
+"res://assets/": "pink",
+"res://core/": "purple",
+"res://pyscripts/": "purple",
+"res://scenes/": "green",
+"res://scripts/": "green",
+"res://shaders/": "pink"
+}
+
+[gui]
+
+fonts/dynamic_fonts/use_oversampling=false
+theme/custom_font="uid://byl2nr4duabis"
+theme/default_font_multichannel_signed_distance_field=true
+theme/default_font_generate_mipmaps=true

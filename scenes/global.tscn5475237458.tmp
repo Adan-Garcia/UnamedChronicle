@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cirj05stuhm24"]
+
+[ext_resource type="Script" uid="uid://ceg75bk50ooxx" path="res://scripts/global.gd" id="1_nmxvb"]
+[ext_resource type="PackedScene" uid="uid://dnsc4173kuc87" path="res://scenes/Worldstate.tscn" id="2_opebo"]
+[ext_resource type="Script" uid="uid://52svm841cmfc" path="res://scripts/cord.gd" id="3_opebo"]
+
+[node name="Global" type="Node2D"]
+script = ExtResource("1_nmxvb")
+
+[node name="WorldState" parent="." instance=ExtResource("2_opebo")]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("3_opebo")

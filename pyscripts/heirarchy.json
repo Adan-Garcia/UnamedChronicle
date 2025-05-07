@@ -1,0 +1,4583 @@
+{
+  "Empires": [
+	{
+	  "id": 1,
+	  "name": "Bubutia",
+	  "x": 584,
+	  "y": 577,
+	  "area": 56166,
+	  "neighbors": [
+		8,
+		6,
+		7,
+		5
+	  ],
+	  "urban": 607.4899999999998,
+	  "rural": 7255.243912488222,
+	  "diplomacy": [
+		"x",
+		"x",
+		"Neutral",
+		"Ally",
+		"Friendly",
+		"Ally",
+		"Suspicion",
+		"Ally",
+		"Suspicion",
+		"Neutral",
+		"Ally"
+	  ],
+	  "sectors": [
+		{
+		  "id": 1,
+		  "name": "Sedin",
+		  "x": 577,
+		  "y": 482,
+		  "towns": [
+			{
+			  "id": 1,
+			  "name": "Vorori",
+			  "x": 558.68,
+			  "y": 481.94,
+			  "capital": 1,
+			  "culture": 6,
+			  "population": 87.008
+			},
+			{
+			  "id": 88,
+			  "name": "Karaysk",
+			  "x": 573.94,
+			  "y": 500.54,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 1.499
+			},
+			{
+			  "id": 140,
+			  "name": "Lunov",
+			  "x": 584.47,
+			  "y": 458.44,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 1.47
+			}
+		  ]
+		},
+		{
+		  "id": 2,
+		  "name": "Balyurt",
+		  "x": 638,
+		  "y": 931,
+		  "towns": [
+			{
+			  "id": 46,
+			  "name": "Arobaya",
+			  "x": 628.28,
+			  "y": 921.76,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 31.639
+			},
+			{
+			  "id": 120,
+			  "name": "Lennanacen",
+			  "x": 651.01,
+			  "y": 906.22,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 3.674
+			},
+			{
+			  "id": 219,
+			  "name": "Bingur",
+			  "x": 617.59,
+			  "y": 932.14,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 12.241
+			}
+		  ]
+		},
+		{
+		  "id": 3,
+		  "name": "Bontia",
+		  "x": 659,
+		  "y": 754,
+		  "towns": [
+			{
+			  "id": 25,
+			  "name": "Angiscano",
+			  "x": 672.31,
+			  "y": 736.21,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 11.372
+			},
+			{
+			  "id": 73,
+			  "name": "Spigninione",
+			  "x": 662.71,
+			  "y": 738.28,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 9.416
+			},
+			{
+			  "id": 122,
+			  "name": "Loutumponia",
+			  "x": 659.49,
+			  "y": 770.77,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 24.51
+			},
+			{
+			  "id": 262,
+			  "name": "Pocedioli",
+			  "x": 673.7,
+			  "y": 769.3,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 1.83
+			},
+			{
+			  "id": 318,
+			  "name": "Aeventodu",
+			  "x": 645.1,
+			  "y": 767.35,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 2.239
+			},
+			{
+			  "id": 343,
+			  "name": "Tarlonguille",
+			  "x": 629.15,
+			  "y": 749.21,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 0.823
+			}
+		  ]
+		},
+		{
+		  "id": 4,
+		  "name": "Roskorec",
+		  "x": 561,
+		  "y": 437,
+		  "towns": [
+			{
+			  "id": 83,
+			  "name": "Vsemyans",
+			  "x": 583.07,
+			  "y": 436.35,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 1.676
+			},
+			{
+			  "id": 114,
+			  "name": "Torodnovo",
+			  "x": 554.33,
+			  "y": 453.77,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 23.883
+			},
+			{
+			  "id": 130,
+			  "name": "Bratschev",
+			  "x": 544.46,
+			  "y": 413.95,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 5.187
+			}
+		  ]
+		},
+		{
+		  "id": 29,
+		  "name": "Zavichi",
+		  "x": 564,
+		  "y": 191,
+		  "towns": [
+			{
+			  "id": 8,
+			  "name": "Vrev",
+			  "x": 547.77,
+			  "y": 291.99,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 2.452
+			},
+			{
+			  "id": 200,
+			  "name": "Zavichi",
+			  "x": 568.93,
+			  "y": 211.99,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 5.386
+			}
+		  ]
+		},
+		{
+		  "id": 30,
+		  "name": "Steva",
+		  "x": 577,
+		  "y": 318,
+		  "towns": [
+			{
+			  "id": 10,
+			  "name": "Rzhev",
+			  "x": 577.47,
+			  "y": 380.8,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 4.52
+			},
+			{
+			  "id": 35,
+			  "name": "Rylsk",
+			  "x": 578.88,
+			  "y": 359.06,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 10.815
+			},
+			{
+			  "id": 92,
+			  "name": "Idycheres",
+			  "x": 580.05,
+			  "y": 404.24,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 20.286
+			},
+			{
+			  "id": 95,
+			  "name": "Domihisov",
+			  "x": 559.96,
+			  "y": 370.67,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 7.781
+			},
+			{
+			  "id": 128,
+			  "name": "Mtsen",
+			  "x": 547.65,
+			  "y": 390.08,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 2.587
+			},
+			{
+			  "id": 135,
+			  "name": "Ostrov",
+			  "x": 564.67,
+			  "y": 327.62,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 14.725
+			},
+			{
+			  "id": 189,
+			  "name": "Steva",
+			  "x": 607.2,
+			  "y": 287.6,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 5.098
+			},
+			{
+			  "id": 230,
+			  "name": "Shuryn",
+			  "x": 604.35,
+			  "y": 323.06,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 11.573
+			},
+			{
+			  "id": 271,
+			  "name": "Vselugnia",
+			  "x": 588.47,
+			  "y": 325.76,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 15.826
+			},
+			{
+			  "id": 279,
+			  "name": "Vorovy",
+			  "x": 568.93,
+			  "y": 353.2,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 12.103
+			}
+		  ]
+		},
+		{
+		  "id": 31,
+		  "name": "Chechia",
+		  "x": 592,
+		  "y": 588,
+		  "towns": [
+			{
+			  "id": 20,
+			  "name": "Gleremilgo",
+			  "x": 592.16,
+			  "y": 500.29,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 1.459
+			},
+			{
+			  "id": 24,
+			  "name": "Bozhesk",
+			  "x": 608.18,
+			  "y": 479.59,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 12.365
+			},
+			{
+			  "id": 27,
+			  "name": "Forvigulei",
+			  "x": 542.08,
+			  "y": 547.02,
+			  "capital": 0,
+			  "culture": 11,
+			  "population": 2.356
+			},
+			{
+			  "id": 42,
+			  "name": "Seirafais",
+			  "x": 546.5,
+			  "y": 589.4,
+			  "capital": 0,
+			  "culture": 11,
+			  "population": 1.693
+			},
+			{
+			  "id": 68,
+			  "name": "Coentravem",
+			  "x": 583.95,
+			  "y": 575.63,
+			  "capital": 0,
+			  "culture": 11,
+			  "population": 4.638
+			},
+			{
+			  "id": 119,
+			  "name": "Oporia",
+			  "x": 564.67,
+			  "y": 619.38,
+			  "capital": 0,
+			  "culture": 11,
+			  "population": 15.983
+			},
+			{
+			  "id": 121,
+			  "name": "Luniarozyr",
+			  "x": 572.89,
+			  "y": 544.97,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 1.439
+			},
+			{
+			  "id": 166,
+			  "name": "Rorechevsk",
+			  "x": 588.52,
+			  "y": 528.33,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 9.407
+			},
+			{
+			  "id": 178,
+			  "name": "Vareira",
+			  "x": 597.8,
+			  "y": 591.81,
+			  "capital": 0,
+			  "culture": 11,
+			  "population": 1.631
+			},
+			{
+			  "id": 202,
+			  "name": "Fanquer",
+			  "x": 582.74,
+			  "y": 593.57,
+			  "capital": 0,
+			  "culture": 11,
+			  "population": 7.412
+			},
+			{
+			  "id": 214,
+			  "name": "Caligalin",
+			  "x": 554.22,
+			  "y": 529.57,
+			  "capital": 0,
+			  "culture": 11,
+			  "population": 12.1
+			}
+		  ]
+		},
+		{
+		  "id": 32,
+		  "name": "Condentigni",
+		  "x": 625,
+		  "y": 688,
+		  "towns": [
+			{
+			  "id": 2,
+			  "name": "Capricovia",
+			  "x": 602.13,
+			  "y": 728.89,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 6.133
+			},
+			{
+			  "id": 17,
+			  "name": "Vinheirao",
+			  "x": 567.9,
+			  "y": 656.7,
+			  "capital": 0,
+			  "culture": 11,
+			  "population": 3.718
+			},
+			{
+			  "id": 54,
+			  "name": "Poglia",
+			  "x": 643.93,
+			  "y": 729.38,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 1.413
+			},
+			{
+			  "id": 104,
+			  "name": "Trerora",
+			  "x": 580.13,
+			  "y": 682.1,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 1.07
+			},
+			{
+			  "id": 132,
+			  "name": "Piecorboglio",
+			  "x": 615.47,
+			  "y": 677.69,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 25.138
+			},
+			{
+			  "id": 137,
+			  "name": "Condentigni",
+			  "x": 602.9,
+			  "y": 641.43,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 14.308
+			},
+			{
+			  "id": 154,
+			  "name": "Vallo",
+			  "x": 625.1,
+			  "y": 693.2,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 4.001
+			},
+			{
+			  "id": 160,
+			  "name": "Posa",
+			  "x": 642.87,
+			  "y": 691.98,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 1.556
+			},
+			{
+			  "id": 179,
+			  "name": "Conagorno",
+			  "x": 597.42,
+			  "y": 667.38,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 13.863
+			},
+			{
+			  "id": 182,
+			  "name": "Trinosidodo",
+			  "x": 593.94,
+			  "y": 708.91,
+			  "capital": 0,
+			  "culture": 4,
+			  "population": 1.417
+			},
+			{
+			  "id": 243,
+			  "name": "Mantture",
+			  "x": 643.93,
+			  "y": 645.46,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 2.309
+			}
+		  ]
+		},
+		{
+		  "id": 33,
+		  "name": "Alesateti",
+		  "x": 761,
+		  "y": 803,
+		  "towns": [
+			{
+			  "id": 9,
+			  "name": "Aelovinodu",
+			  "x": 728.71,
+			  "y": 827.39,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 16.014
+			},
+			{
+			  "id": 51,
+			  "name": "Itatulalis",
+			  "x": 754.64,
+			  "y": 802.89,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 2.47
+			},
+			{
+			  "id": 71,
+			  "name": "Flarea",
+			  "x": 775.02,
+			  "y": 858.25,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 1.589
+			},
+			{
+			  "id": 76,
+			  "name": "Lintiania",
+			  "x": 778.45,
+			  "y": 819.68,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 2.012
+			},
+			{
+			  "id": 86,
+			  "name": "Dubrisipi",
+			  "x": 733.24,
+			  "y": 794.92,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 11.527
+			},
+			{
+			  "id": 113,
+			  "name": "Alesateti",
+			  "x": 709.13,
+			  "y": 767.96,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 1.809
+			},
+			{
+			  "id": 117,
+			  "name": "Connolinium",
+			  "x": 702.09,
+			  "y": 787.91,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 2.632
+			},
+			{
+			  "id": 133,
+			  "name": "Ullerumene",
+			  "x": 733.17,
+			  "y": 870.51,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 9.23
+			},
+			{
+			  "id": 134,
+			  "name": "Vicoriata",
+			  "x": 744.13,
+			  "y": 890.03,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 1.693
+			},
+			{
+			  "id": 180,
+			  "name": "Leinum",
+			  "x": 773.88,
+			  "y": 791.27,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 11.89
+			},
+			{
+			  "id": 197,
+			  "name": "Cornaleme",
+			  "x": 762,
+			  "y": 821.91,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 15.356
+			},
+			{
+			  "id": 276,
+			  "name": "Atuatum",
+			  "x": 769.34,
+			  "y": 808.48,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 9.492
+			},
+			{
+			  "id": 287,
+			  "name": "Victodurora",
+			  "x": 750.99,
+			  "y": 843.1,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 5.02
+			},
+			{
+			  "id": 320,
+			  "name": "Hoche",
+			  "x": 810.36,
+			  "y": 778.84,
+			  "capital": 0,
+			  "culture": 1,
+			  "population": 1.757
+			}
+		  ]
+		},
+		{
+		  "id": 34,
+		  "name": "Albataler",
+		  "x": 706,
+		  "y": 912,
+		  "towns": [
+			{
+			  "id": 29,
+			  "name": "Vicrieti",
+			  "x": 679.01,
+			  "y": 900.23,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 8.912
+			},
+			{
+			  "id": 41,
+			  "name": "Albataler",
+			  "x": 718.95,
+			  "y": 892.59,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 5.785
+			},
+			{
+			  "id": 142,
+			  "name": "Saqunum",
+			  "x": 693.12,
+			  "y": 898.33,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 2.783
+			},
+			{
+			  "id": 263,
+			  "name": "Vilbium",
+			  "x": 714.13,
+			  "y": 902.05,
+			  "capital": 0,
+			  "culture": 9,
+			  "population": 1.615
+			}
+		  ]
+		},
+		{
+		  "id": 35,
+		  "name": "Yani",
+		  "x": 621,
+		  "y": 961,
+		  "towns": [
+			{
+			  "id": 103,
+			  "name": "Yani",
+			  "x": 607.52,
+			  "y": 948.86,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 8.179
+			},
+			{
+			  "id": 176,
+			  "name": "Yadi",
+			  "x": 615.77,
+			  "y": 969.17,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 10.697
+			}
+		  ]
+		},
+		{
+		  "id": 36,
+		  "name": "Horecia",
+		  "x": 538,
+		  "y": 404,
+		  "towns": []
+		}
+	  ]
+	},
+	{
+	  "id": 2,
+	  "name": "Matia",
+	  "x": 1412,
+	  "y": 962,
+	  "area": 13680,
+	  "neighbors": [
+		0
+	  ],
+	  "urban": 200.43500000000006,
+	  "rural": 2027.117547929287,
+	  "diplomacy": [
+		"x",
+		"Neutral",
+		"x",
+		"Unknown",
+		"Friendly",
+		"Neutral",
+		"Neutral",
+		"Neutral",
+		"Friendly",
+		"Neutral",
+		"Neutral"
+	  ],
+	  "sectors": [
+		{
+		  "id": 5,
+		  "name": "Matua",
+		  "x": 1246,
+		  "y": 872,
+		  "towns": [
+			{
+			  "id": 74,
+			  "name": "Ikusurratza",
+			  "x": 1267.47,
+			  "y": 879.34,
+			  "capital": 0,
+			  "culture": 14,
+			  "population": 7.425
+			},
+			{
+			  "id": 165,
+			  "name": "Matua",
+			  "x": 1240.58,
+			  "y": 870.53,
+			  "capital": 1,
+			  "culture": 14,
+			  "population": 22.543
+			}
+		  ]
+		},
+		{
+		  "id": 6,
+		  "name": "Eria",
+		  "x": 1251,
+		  "y": 889,
+		  "towns": [
+			{
+			  "id": 45,
+			  "name": "Kandaindio",
+			  "x": 1245.55,
+			  "y": 896.34,
+			  "capital": 0,
+			  "culture": 14,
+			  "population": 27.559
+			}
+		  ]
+		},
+		{
+		  "id": 37,
+		  "name": "Gourgos",
+		  "x": 1382,
+		  "y": 751,
+		  "towns": [
+			{
+			  "id": 12,
+			  "name": "Oncheron",
+			  "x": 1395.73,
+			  "y": 791.94,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 9.178
+			},
+			{
+			  "id": 32,
+			  "name": "Lekroi",
+			  "x": 1354.27,
+			  "y": 714.96,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 2.492
+			},
+			{
+			  "id": 40,
+			  "name": "Olismeleia",
+			  "x": 1363.3,
+			  "y": 752.2,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 4.116
+			},
+			{
+			  "id": 85,
+			  "name": "Nauclea",
+			  "x": 1398.88,
+			  "y": 730.64,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 13.818
+			},
+			{
+			  "id": 94,
+			  "name": "Thergyba",
+			  "x": 1419.8,
+			  "y": 749.1,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 8.308
+			},
+			{
+			  "id": 98,
+			  "name": "Kysos",
+			  "x": 1398.47,
+			  "y": 767.74,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 14.974
+			},
+			{
+			  "id": 144,
+			  "name": "Dikasthume",
+			  "x": 1351.19,
+			  "y": 730.57,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 2.57
+			},
+			{
+			  "id": 223,
+			  "name": "Cythoryst",
+			  "x": 1361.27,
+			  "y": 782.76,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 4.919
+			},
+			{
+			  "id": 267,
+			  "name": "Gourgos",
+			  "x": 1377.94,
+			  "y": 705.45,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 9.981
+			}
+		  ]
+		},
+		{
+		  "id": 38,
+		  "name": "Plamiama",
+		  "x": 1412,
+		  "y": 962,
+		  "towns": [
+			{
+			  "id": 33,
+			  "name": "Zakhapitria",
+			  "x": 1342.48,
+			  "y": 941.84,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 7.085
+			},
+			{
+			  "id": 37,
+			  "name": "Mormarynt",
+			  "x": 1429.78,
+			  "y": 964.46,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 2.993
+			},
+			{
+			  "id": 109,
+			  "name": "Cropolis",
+			  "x": 1413.6,
+			  "y": 901.1,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 1.657
+			},
+			{
+			  "id": 110,
+			  "name": "Elonia",
+			  "x": 1414.14,
+			  "y": 933.68,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 1.592
+			},
+			{
+			  "id": 123,
+			  "name": "Helcos",
+			  "x": 1373.5,
+			  "y": 895.27,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 14.392
+			},
+			{
+			  "id": 150,
+			  "name": "Aenion",
+			  "x": 1364.87,
+			  "y": 975.29,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 6.931
+			},
+			{
+			  "id": 183,
+			  "name": "Dopolis",
+			  "x": 1349.54,
+			  "y": 904.27,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 2.679
+			},
+			{
+			  "id": 210,
+			  "name": "Plamiama",
+			  "x": 1382.2,
+			  "y": 895.7,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 13.195
+			},
+			{
+			  "id": 244,
+			  "name": "Riton",
+			  "x": 1406.87,
+			  "y": 973.14,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 15.537
+			},
+			{
+			  "id": 322,
+			  "name": "Histhos",
+			  "x": 1363.95,
+			  "y": 910.12,
+			  "capital": 0,
+			  "culture": 8,
+			  "population": 6.491
+			}
+		  ]
+		},
+		{
+		  "id": 39,
+		  "name": "Beko",
+		  "x": 1274,
+		  "y": 882,
+		  "towns": []
+		}
+	  ]
+	},
+	{
+	  "id": 3,
+	  "name": "Totia",
+	  "x": 805,
+	  "y": 465,
+	  "area": 10510,
+	  "neighbors": [
+		6,
+		7
+	  ],
+	  "urban": 50.909,
+	  "rural": 674.7268073558807,
+	  "diplomacy": [
+		"x",
+		"Ally",
+		"Unknown",
+		"x",
+		"Neutral",
+		"Neutral",
+		"Ally",
+		"Neutral",
+		"Neutral",
+		"Neutral",
+		"Neutral"
+	  ],
+	  "sectors": [
+		{
+		  "id": 7,
+		  "name": "Jepo",
+		  "x": 849,
+		  "y": 492,
+		  "towns": [
+			{
+			  "id": 163,
+			  "name": "Kaunaki",
+			  "x": 844.33,
+			  "y": 504.05,
+			  "capital": 1,
+			  "culture": 10,
+			  "population": 22.377
+			}
+		  ]
+		},
+		{
+		  "id": 8,
+		  "name": "Obnaskisa",
+		  "x": 778,
+		  "y": 443,
+		  "towns": [
+			{
+			  "id": 265,
+			  "name": "Obnaskisa",
+			  "x": 775.44,
+			  "y": 423.16,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 9.124
+			},
+			{
+			  "id": 325,
+			  "name": "Mamauerusi",
+			  "x": 791.3,
+			  "y": 433.9,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 1.875
+			},
+			{
+			  "id": 374,
+			  "name": "Jargameska",
+			  "x": 797.29,
+			  "y": 444.22,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 0.7
+			}
+		  ]
+		},
+		{
+		  "id": 40,
+		  "name": "Iskia",
+		  "x": 803,
+		  "y": 469,
+		  "towns": [
+			{
+			  "id": 273,
+			  "name": "Loksa",
+			  "x": 811.94,
+			  "y": 478.44,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 2.283
+			},
+			{
+			  "id": 340,
+			  "name": "Mantka",
+			  "x": 783.58,
+			  "y": 481.24,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 1.346
+			},
+			{
+			  "id": 341,
+			  "name": "Nuvuspo",
+			  "x": 830.04,
+			  "y": 481.04,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 0.74
+			}
+		  ]
+		},
+		{
+		  "id": 41,
+		  "name": "New Obnaskisa",
+		  "x": 872,
+		  "y": 559,
+		  "towns": [
+			{
+			  "id": 225,
+			  "name": "Seranes",
+			  "x": 906.1,
+			  "y": 576.4,
+			  "capital": 0,
+			  "culture": 5,
+			  "population": 2.831
+			},
+			{
+			  "id": 327,
+			  "name": "Minilca",
+			  "x": 902.68,
+			  "y": 534.77,
+			  "capital": 0,
+			  "culture": 5,
+			  "population": 4.34
+			},
+			{
+			  "id": 376,
+			  "name": "Berzo",
+			  "x": 871.27,
+			  "y": 544.12,
+			  "capital": 0,
+			  "culture": 5,
+			  "population": 5.293
+			}
+		  ]
+		}
+	  ]
+	},
+	{
+	  "id": 4,
+	  "name": "Aberia",
+	  "x": 1169,
+	  "y": 185,
+	  "area": 111573,
+	  "neighbors": [
+		8,
+		0
+	  ],
+	  "urban": 288.74999999999994,
+	  "rural": 4582.537573933601,
+	  "diplomacy": [
+		"x",
+		"Friendly",
+		"Friendly",
+		"Neutral",
+		"x",
+		"Neutral",
+		"Unknown",
+		"Neutral",
+		"Suspicion",
+		"Neutral",
+		"Neutral"
+	  ],
+	  "sectors": [
+		{
+		  "id": 9,
+		  "name": "Agos",
+		  "x": 971,
+		  "y": 290,
+		  "towns": [
+			{
+			  "id": 145,
+			  "name": "Aberta",
+			  "x": 971.69,
+			  "y": 304.81,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 6.658
+			},
+			{
+			  "id": 191,
+			  "name": "Agos",
+			  "x": 953.73,
+			  "y": 300.36,
+			  "capital": 1,
+			  "culture": 15,
+			  "population": 21.71
+			},
+			{
+			  "id": 257,
+			  "name": "Aberfren",
+			  "x": 937.42,
+			  "y": 290.41,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 8.239
+			}
+		  ]
+		},
+		{
+		  "id": 10,
+		  "name": "Choria",
+		  "x": 1237,
+		  "y": 227,
+		  "towns": [
+			{
+			  "id": 38,
+			  "name": "Chabenuake",
+			  "x": 1248.5,
+			  "y": 225.1,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 22.767
+			}
+		  ]
+		},
+		{
+		  "id": 11,
+		  "name": "Aberwick",
+		  "x": 1022,
+		  "y": 380,
+		  "towns": [
+			{
+			  "id": 19,
+			  "name": "Aberwick",
+			  "x": 1014.72,
+			  "y": 399.9,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 32.973
+			},
+			{
+			  "id": 97,
+			  "name": "Censerarth",
+			  "x": 999.65,
+			  "y": 374.5,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.834
+			},
+			{
+			  "id": 126,
+			  "name": "Arinnse",
+			  "x": 1043.69,
+			  "y": 377.88,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 6.279
+			},
+			{
+			  "id": 211,
+			  "name": "Inner",
+			  "x": 1017.29,
+			  "y": 385.17,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.703
+			}
+		  ]
+		},
+		{
+		  "id": 42,
+		  "name": "Larania",
+		  "x": 1140,
+		  "y": 154,
+		  "towns": [
+			{
+			  "id": 198,
+			  "name": "Inve",
+			  "x": 1148.55,
+			  "y": 83.59,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 2.46
+			},
+			{
+			  "id": 220,
+			  "name": "Llannermowi",
+			  "x": 1208.53,
+			  "y": 105.2,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.346
+			},
+			{
+			  "id": 293,
+			  "name": "Aracre",
+			  "x": 1240.46,
+			  "y": 123.23,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 13.057
+			},
+			{
+			  "id": 333,
+			  "name": "Abercy",
+			  "x": 1182.12,
+			  "y": 233.79,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 4.417
+			},
+			{
+			  "id": 390,
+			  "name": "Bhruroioma",
+			  "x": 1263.91,
+			  "y": 119.17,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.669
+			}
+		  ]
+		},
+		{
+		  "id": 43,
+		  "name": "Ingele",
+		  "x": 1371,
+		  "y": 214,
+		  "towns": [
+			{
+			  "id": 6,
+			  "name": "Anarcesyn",
+			  "x": 1312.55,
+			  "y": 257.38,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 18.321
+			},
+			{
+			  "id": 43,
+			  "name": "Aberlochy",
+			  "x": 1414.66,
+			  "y": 254.66,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 2.292
+			},
+			{
+			  "id": 52,
+			  "name": "Bourabernan",
+			  "x": 1440.1,
+			  "y": 209.2,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.775
+			},
+			{
+			  "id": 217,
+			  "name": "Enek",
+			  "x": 1436.2,
+			  "y": 202.5,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.714
+			},
+			{
+			  "id": 221,
+			  "name": "Cersgobra",
+			  "x": 1421.83,
+			  "y": 136.06,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 6.107
+			},
+			{
+			  "id": 229,
+			  "name": "Inveburum",
+			  "x": 1428.44,
+			  "y": 226.51,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 4.063
+			},
+			{
+			  "id": 251,
+			  "name": "Aberfrwddon",
+			  "x": 1429.29,
+			  "y": 178,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.42
+			},
+			{
+			  "id": 345,
+			  "name": "Broslyn",
+			  "x": 1416.34,
+			  "y": 163.19,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 0.681
+			}
+		  ]
+		},
+		{
+		  "id": 44,
+		  "name": "Afesp",
+		  "x": 1282,
+		  "y": 244,
+		  "towns": [
+			{
+			  "id": 39,
+			  "name": "Iubh",
+			  "x": 1330.39,
+			  "y": 278.3,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.726
+			},
+			{
+			  "id": 49,
+			  "name": "Kaberhadfa",
+			  "x": 1271.98,
+			  "y": 277.74,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 2.675
+			},
+			{
+			  "id": 306,
+			  "name": "Chear",
+			  "x": 1240.36,
+			  "y": 264.53,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 9.413
+			},
+			{
+			  "id": 380,
+			  "name": "Afesp",
+			  "x": 1272.58,
+			  "y": 234.73,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 0.718
+			}
+		  ]
+		},
+		{
+		  "id": 45,
+		  "name": "Aberthe",
+		  "x": 1003,
+		  "y": 225,
+		  "towns": [
+			{
+			  "id": 148,
+			  "name": "Rinverden",
+			  "x": 974.48,
+			  "y": 327.65,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 7.158
+			},
+			{
+			  "id": 208,
+			  "name": "Kjellisda",
+			  "x": 897.79,
+			  "y": 375.49,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.648
+			},
+			{
+			  "id": 246,
+			  "name": "Mehamn",
+			  "x": 876.99,
+			  "y": 301.8,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 3.311
+			},
+			{
+			  "id": 269,
+			  "name": "Anverow",
+			  "x": 1077.24,
+			  "y": 295.79,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 0.625
+			},
+			{
+			  "id": 270,
+			  "name": "Ocregirnant",
+			  "x": 1066.14,
+			  "y": 320.77,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 7.33
+			},
+			{
+			  "id": 294,
+			  "name": "Aberfantili",
+			  "x": 1045.95,
+			  "y": 283.65,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 2.15
+			},
+			{
+			  "id": 307,
+			  "name": "Lago",
+			  "x": 1035.57,
+			  "y": 324.91,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 4.3
+			},
+			{
+			  "id": 337,
+			  "name": "Ostadvog",
+			  "x": 907.73,
+			  "y": 328.25,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 0.749
+			},
+			{
+			  "id": 338,
+			  "name": "Dinnver",
+			  "x": 993.97,
+			  "y": 351.11,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 17.526
+			},
+			{
+			  "id": 356,
+			  "name": "Aberthe",
+			  "x": 948.74,
+			  "y": 255.17,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 0.849
+			},
+			{
+			  "id": 364,
+			  "name": "Kjelnes",
+			  "x": 854.83,
+			  "y": 271.35,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 0.723
+			},
+			{
+			  "id": 365,
+			  "name": "Stokkika",
+			  "x": 875.87,
+			  "y": 267.19,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 0.725
+			},
+			{
+			  "id": 367,
+			  "name": "Bros",
+			  "x": 1015.38,
+			  "y": 311.44,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 0.688
+			},
+			{
+			  "id": 383,
+			  "name": "Higslika",
+			  "x": 884.72,
+			  "y": 320.34,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 0.767
+			},
+			{
+			  "id": 392,
+			  "name": "Boshin",
+			  "x": 929.03,
+			  "y": 271.88,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.659
+			}
+		  ]
+		},
+		{
+		  "id": 46,
+		  "name": "Aber",
+		  "x": 1145,
+		  "y": 266,
+		  "towns": [
+			{
+			  "id": 65,
+			  "name": "Nabergoed",
+			  "x": 1207.09,
+			  "y": 277.9,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 6.786
+			},
+			{
+			  "id": 222,
+			  "name": "Inverkeith",
+			  "x": 1133.71,
+			  "y": 262.45,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.863
+			},
+			{
+			  "id": 239,
+			  "name": "Bhrunosachs",
+			  "x": 1073.9,
+			  "y": 346.2,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 0.75
+			},
+			{
+			  "id": 300,
+			  "name": "Aber",
+			  "x": 1110.12,
+			  "y": 251.41,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 2.432
+			},
+			{
+			  "id": 323,
+			  "name": "Arigwyn",
+			  "x": 1128.08,
+			  "y": 290.37,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 11.631
+			},
+			{
+			  "id": 366,
+			  "name": "Inbruac",
+			  "x": 1112.01,
+			  "y": 278.64,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 2.561
+			},
+			{
+			  "id": 368,
+			  "name": "Cabergwaun",
+			  "x": 1083.7,
+			  "y": 326.2,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 4.522
+			}
+		  ]
+		},
+		{
+		  "id": 47,
+		  "name": "Invereid",
+		  "x": 1384,
+		  "y": 276,
+		  "towns": [
+			{
+			  "id": 335,
+			  "name": "Abermunos",
+			  "x": 1392.56,
+			  "y": 280.87,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 2.971
+			},
+			{
+			  "id": 346,
+			  "name": "Rosachs",
+			  "x": 1367.27,
+			  "y": 277.6,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 2.906
+			}
+		  ]
+		},
+		{
+		  "id": 48,
+		  "name": "Lonsverka",
+		  "x": 951,
+		  "y": 374,
+		  "towns": [
+			{
+			  "id": 174,
+			  "name": "Lonsverka",
+			  "x": 949.3,
+			  "y": 368.7,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 9.95
+			},
+			{
+			  "id": 371,
+			  "name": "Fhlai",
+			  "x": 1001.66,
+			  "y": 366.33,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 12.926
+			}
+		  ]
+		},
+		{
+		  "id": 49,
+		  "name": "Bleddaura",
+		  "x": 1051,
+		  "y": 366,
+		  "towns": [
+			{
+			  "id": 289,
+			  "name": "Abermaw",
+			  "x": 1053.21,
+			  "y": 386.14,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.829
+			},
+			{
+			  "id": 369,
+			  "name": "Bleddaura",
+			  "x": 1063.34,
+			  "y": 366.4,
+			  "capital": 0,
+			  "culture": 15,
+			  "population": 1.398
+			}
+		  ]
+		},
+		{
+		  "id": 50,
+		  "name": "Amersheadia",
+		  "x": 996,
+		  "y": 109,
+		  "towns": []
+		},
+		{
+		  "id": 51,
+		  "name": "Bri",
+		  "x": 1281,
+		  "y": 123,
+		  "towns": []
+		},
+		{
+		  "id": 52,
+		  "name": "Antia",
+		  "x": 1071,
+		  "y": 342,
+		  "towns": []
+		},
+		{
+		  "id": 53,
+		  "name": "Orsvol",
+		  "x": 880,
+		  "y": 391,
+		  "towns": []
+		}
+	  ]
+	},
+	{
+	  "id": 5,
+	  "name": "Fotia",
+	  "x": 905,
+	  "y": 860,
+	  "area": 108652,
+	  "neighbors": [
+		7,
+		10,
+		1
+	  ],
+	  "urban": 449.7539999999998,
+	  "rural": 7771.711500674486,
+	  "diplomacy": [
+		"x",
+		"Ally",
+		"Neutral",
+		"Neutral",
+		"Neutral",
+		"x",
+		"Neutral",
+		"Suzerain",
+		"Neutral",
+		"Friendly",
+		"Suzerain"
+	  ],
+	  "sectors": [
+		{
+		  "id": 12,
+		  "name": "Devizsolgar",
+		  "x": 1046,
+		  "y": 902,
+		  "towns": [
+			{
+			  "id": 268,
+			  "name": "Devizsolgar",
+			  "x": 1056.1,
+			  "y": 911.77,
+			  "capital": 1,
+			  "culture": 12,
+			  "population": 19.655
+			}
+		  ]
+		},
+		{
+		  "id": 13,
+		  "name": "Maglod",
+		  "x": 1161,
+		  "y": 704,
+		  "towns": [
+			{
+			  "id": 87,
+			  "name": "Naboroszeglod",
+			  "x": 1181.3,
+			  "y": 697.7,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 14.7
+			},
+			{
+			  "id": 100,
+			  "name": "Bozarvarteso",
+			  "x": 1157,
+			  "y": 729,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.795
+			},
+			{
+			  "id": 286,
+			  "name": "Maglod",
+			  "x": 1172.16,
+			  "y": 707.99,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 20.162
+			}
+		  ]
+		},
+		{
+		  "id": 14,
+		  "name": "Triguecoq",
+		  "x": 1047,
+		  "y": 679,
+		  "towns": [
+			{
+			  "id": 115,
+			  "name": "Triguecoq",
+			  "x": 1043.77,
+			  "y": 690.46,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 23.404
+			}
+		  ]
+		},
+		{
+		  "id": 15,
+		  "name": "Akarten",
+		  "x": 733,
+		  "y": 968,
+		  "towns": [
+			{
+			  "id": 62,
+			  "name": "Akarten",
+			  "x": 738.72,
+			  "y": 975.24,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 17.866
+			},
+			{
+			  "id": 206,
+			  "name": "Yeselen",
+			  "x": 704.76,
+			  "y": 957.12,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 1.643
+			},
+			{
+			  "id": 242,
+			  "name": "Alazbeyli",
+			  "x": 750.88,
+			  "y": 975.93,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 1.575
+			},
+			{
+			  "id": 355,
+			  "name": "Sarprakbe",
+			  "x": 742.84,
+			  "y": 951,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 3.495
+			}
+		  ]
+		},
+		{
+		  "id": 16,
+		  "name": "Garengia",
+		  "x": 1116,
+		  "y": 732,
+		  "towns": [
+			{
+			  "id": 82,
+			  "name": "Louleaule",
+			  "x": 1102.6,
+			  "y": 720.65,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 16.097
+			},
+			{
+			  "id": 194,
+			  "name": "Enville",
+			  "x": 1115.71,
+			  "y": 712,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 14.265
+			},
+			{
+			  "id": 250,
+			  "name": "Morvarton",
+			  "x": 1125.36,
+			  "y": 749.11,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 0.656
+			}
+		  ]
+		},
+		{
+		  "id": 54,
+		  "name": "Metavecsi",
+		  "x": 1196,
+		  "y": 540,
+		  "towns": [
+			{
+			  "id": 5,
+			  "name": "Bajosza",
+			  "x": 1134.63,
+			  "y": 464.71,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 2.958
+			},
+			{
+			  "id": 77,
+			  "name": "Metavecsi",
+			  "x": 1177.61,
+			  "y": 437.67,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 8.621
+			},
+			{
+			  "id": 79,
+			  "name": "Szazsaklos",
+			  "x": 1141.41,
+			  "y": 503.26,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 6.417
+			},
+			{
+			  "id": 131,
+			  "name": "Kislalom",
+			  "x": 1159.16,
+			  "y": 462.86,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 7.644
+			},
+			{
+			  "id": 159,
+			  "name": "Hazabadszent",
+			  "x": 1147.8,
+			  "y": 525.3,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 9.382
+			},
+			{
+			  "id": 181,
+			  "name": "Hajdusam",
+			  "x": 1223.37,
+			  "y": 512.13,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 7.212
+			},
+			{
+			  "id": 254,
+			  "name": "Vecsely",
+			  "x": 1163.26,
+			  "y": 564.89,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.419
+			},
+			{
+			  "id": 291,
+			  "name": "Tegharos",
+			  "x": 1142.3,
+			  "y": 452.37,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.756
+			},
+			{
+			  "id": 309,
+			  "name": "Delekes",
+			  "x": 1175.51,
+			  "y": 464.77,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.702
+			},
+			{
+			  "id": 326,
+			  "name": "Garpalok",
+			  "x": 1213.44,
+			  "y": 495.18,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.433
+			},
+			{
+			  "id": 359,
+			  "name": "Aszalmaroste",
+			  "x": 1209.3,
+			  "y": 448.15,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 4.206
+			},
+			{
+			  "id": 375,
+			  "name": "Zsamlozarmis",
+			  "x": 1194.49,
+			  "y": 464.92,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.604
+			},
+			{
+			  "id": 388,
+			  "name": "Teglodhatad",
+			  "x": 1206.11,
+			  "y": 575.01,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 2.979
+			}
+		  ]
+		},
+		{
+		  "id": 55,
+		  "name": "Batnoklosia",
+		  "x": 1205,
+		  "y": 626,
+		  "towns": [
+			{
+			  "id": 215,
+			  "name": "Koheny",
+			  "x": 1287.02,
+			  "y": 557.75,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 5.209
+			},
+			{
+			  "id": 249,
+			  "name": "Hajdunapu",
+			  "x": 1241.49,
+			  "y": 647.29,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.826
+			},
+			{
+			  "id": 255,
+			  "name": "Sanmaj",
+			  "x": 1276.88,
+			  "y": 592.15,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 2.622
+			},
+			{
+			  "id": 316,
+			  "name": "Tiszeg",
+			  "x": 1233.06,
+			  "y": 624.81,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 2.684
+			},
+			{
+			  "id": 329,
+			  "name": "Dunarom",
+			  "x": 1217.7,
+			  "y": 666.1,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 0.748
+			},
+			{
+			  "id": 350,
+			  "name": "Korbakoros",
+			  "x": 1177.83,
+			  "y": 605.83,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 3.61
+			},
+			{
+			  "id": 377,
+			  "name": "Kiszalmaste",
+			  "x": 1289.7,
+			  "y": 574.2,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 5.903
+			},
+			{
+			  "id": 378,
+			  "name": "Kadisertondok",
+			  "x": 1183.89,
+			  "y": 658.87,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 5.947
+			}
+		  ]
+		},
+		{
+		  "id": 56,
+		  "name": "Karcagyany",
+		  "x": 1148,
+		  "y": 670,
+		  "towns": [
+			{
+			  "id": 105,
+			  "name": "Sarpaverte",
+			  "x": 1152.3,
+			  "y": 630.1,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 5.01
+			},
+			{
+			  "id": 108,
+			  "name": "Vises",
+			  "x": 1115.82,
+			  "y": 683.79,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 2.474
+			},
+			{
+			  "id": 237,
+			  "name": "Courmessain",
+			  "x": 1134.35,
+			  "y": 668.63,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 4.271
+			}
+		  ]
+		},
+		{
+		  "id": 57,
+		  "name": "New Garengia",
+		  "x": 1004,
+		  "y": 730,
+		  "towns": [
+			{
+			  "id": 26,
+			  "name": "Mevakoczi",
+			  "x": 979.09,
+			  "y": 716.05,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.666
+			},
+			{
+			  "id": 75,
+			  "name": "Erdontepieds",
+			  "x": 1008.87,
+			  "y": 670.57,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.702
+			},
+			{
+			  "id": 78,
+			  "name": "Lorcillemouxy",
+			  "x": 1017.6,
+			  "y": 662.89,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 13.979
+			},
+			{
+			  "id": 187,
+			  "name": "Balomlo",
+			  "x": 1037.35,
+			  "y": 739.61,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 5.763
+			},
+			{
+			  "id": 226,
+			  "name": "Almastarcsa",
+			  "x": 1022.93,
+			  "y": 716.58,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.253
+			},
+			{
+			  "id": 342,
+			  "name": "Gyalma",
+			  "x": 991.29,
+			  "y": 736.02,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 6.843
+			}
+		  ]
+		},
+		{
+		  "id": 58,
+		  "name": "Zsamlozarmend",
+		  "x": 905,
+		  "y": 770,
+		  "towns": [
+			{
+			  "id": 205,
+			  "name": "Zsamlozarmend",
+			  "x": 953.88,
+			  "y": 692.97,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.307
+			},
+			{
+			  "id": 299,
+			  "name": "Kehllbach",
+			  "x": 910.74,
+			  "y": 819.39,
+			  "capital": 0,
+			  "culture": 1,
+			  "population": 0.641
+			},
+			{
+			  "id": 344,
+			  "name": "Hare",
+			  "x": 857.16,
+			  "y": 804.19,
+			  "capital": 0,
+			  "culture": 1,
+			  "population": 5.77
+			},
+			{
+			  "id": 353,
+			  "name": "Stausen",
+			  "x": 850.77,
+			  "y": 824.32,
+			  "capital": 0,
+			  "culture": 1,
+			  "population": 0.704
+			}
+		  ]
+		},
+		{
+		  "id": 59,
+		  "name": "Tiszarad",
+		  "x": 1034,
+		  "y": 820,
+		  "towns": [
+			{
+			  "id": 190,
+			  "name": "Varsaroszame",
+			  "x": 979.15,
+			  "y": 803.54,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.392
+			},
+			{
+			  "id": 216,
+			  "name": "Barcstarcses",
+			  "x": 1072.99,
+			  "y": 833.34,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 0.715
+			},
+			{
+			  "id": 233,
+			  "name": "Tiszarad",
+			  "x": 981.28,
+			  "y": 757.97,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.406
+			},
+			{
+			  "id": 303,
+			  "name": "Foralnalom",
+			  "x": 1020.39,
+			  "y": 869.07,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 0.674
+			},
+			{
+			  "id": 311,
+			  "name": "Zircsatvan",
+			  "x": 1089.57,
+			  "y": 770.89,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 7.358
+			},
+			{
+			  "id": 321,
+			  "name": "Babamaz",
+			  "x": 1036.04,
+			  "y": 774.47,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 5.322
+			},
+			{
+			  "id": 330,
+			  "name": "Devecsatvad",
+			  "x": 1011.09,
+			  "y": 845.33,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 3.416
+			},
+			{
+			  "id": 362,
+			  "name": "Jadisaszagyec",
+			  "x": 1070.46,
+			  "y": 759.74,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 12.906
+			}
+		  ]
+		},
+		{
+		  "id": 60,
+		  "name": "Szisujszadi",
+		  "x": 1144,
+		  "y": 743,
+		  "towns": [
+			{
+			  "id": 227,
+			  "name": "Puszfezonyany",
+			  "x": 1134.84,
+			  "y": 781.9,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 5.904
+			},
+			{
+			  "id": 319,
+			  "name": "Szisujszadi",
+			  "x": 1139.94,
+			  "y": 762.86,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 4.66
+			}
+		  ]
+		},
+		{
+		  "id": 61,
+		  "name": "Jajakvarkia",
+		  "x": 1085,
+		  "y": 872,
+		  "towns": [
+			{
+			  "id": 241,
+			  "name": "Marjacalmas",
+			  "x": 1074.1,
+			  "y": 892.47,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 11.006
+			},
+			{
+			  "id": 363,
+			  "name": "Borant",
+			  "x": 1091.7,
+			  "y": 861.6,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 3.284
+			}
+		  ]
+		},
+		{
+		  "id": 62,
+		  "name": "Morindok",
+		  "x": 856,
+		  "y": 889,
+		  "towns": [
+			{
+			  "id": 4,
+			  "name": "Bayoltay",
+			  "x": 885.14,
+			  "y": 948.84,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 5.101
+			},
+			{
+			  "id": 11,
+			  "name": "Yelbeyayte",
+			  "x": 983.75,
+			  "y": 948.84,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 6.976
+			},
+			{
+			  "id": 21,
+			  "name": "Altaybur",
+			  "x": 833.6,
+			  "y": 949.9,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 1.777
+			},
+			{
+			  "id": 60,
+			  "name": "Tayli",
+			  "x": 992.44,
+			  "y": 930.12,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 10.562
+			},
+			{
+			  "id": 61,
+			  "name": "Desen",
+			  "x": 1028.68,
+			  "y": 923.16,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 1.861
+			},
+			{
+			  "id": 69,
+			  "name": "Esente",
+			  "x": 850.07,
+			  "y": 941.46,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 11.035
+			},
+			{
+			  "id": 127,
+			  "name": "Yerelensu",
+			  "x": 810.51,
+			  "y": 942.61,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 1.772
+			},
+			{
+			  "id": 151,
+			  "name": "Poyaykazya",
+			  "x": 904.1,
+			  "y": 954.9,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 2.501
+			},
+			{
+			  "id": 152,
+			  "name": "Eren",
+			  "x": 947.06,
+			  "y": 964.85,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 12.487
+			},
+			{
+			  "id": 158,
+			  "name": "Deri",
+			  "x": 904.58,
+			  "y": 933.4,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 1.787
+			},
+			{
+			  "id": 167,
+			  "name": "Oluyunyurt",
+			  "x": 867.85,
+			  "y": 954.15,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 2.318
+			},
+			{
+			  "id": 168,
+			  "name": "Yanokev",
+			  "x": 941.08,
+			  "y": 953.61,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 11.25
+			},
+			{
+			  "id": 171,
+			  "name": "Alaovazya",
+			  "x": 923.58,
+			  "y": 962.28,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 2.724
+			},
+			{
+			  "id": 188,
+			  "name": "Eperen",
+			  "x": 1010.53,
+			  "y": 939.87,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 7.983
+			},
+			{
+			  "id": 228,
+			  "name": "Boguzsepe",
+			  "x": 924.85,
+			  "y": 941.64,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 1.767
+			},
+			{
+			  "id": 238,
+			  "name": "Koluman",
+			  "x": 838,
+			  "y": 925.82,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 4.674
+			},
+			{
+			  "id": 277,
+			  "name": "Ujdusambek",
+			  "x": 1008.96,
+			  "y": 892.4,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 5.214
+			},
+			{
+			  "id": 331,
+			  "name": "Szardalas",
+			  "x": 952.12,
+			  "y": 915.06,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 2.755
+			},
+			{
+			  "id": 354,
+			  "name": "Morindok",
+			  "x": 936.63,
+			  "y": 895.93,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 2.027
+			},
+			{
+			  "id": 389,
+			  "name": "Csakta",
+			  "x": 995.87,
+			  "y": 910.45,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 2.379
+			}
+		  ]
+		},
+		{
+		  "id": 63,
+		  "name": "Sazkalyurt",
+		  "x": 749,
+		  "y": 933,
+		  "towns": [
+			{
+			  "id": 3,
+			  "name": "Aleke",
+			  "x": 702.07,
+			  "y": 983.35,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 5.416
+			},
+			{
+			  "id": 112,
+			  "name": "Balkanler",
+			  "x": 782.08,
+			  "y": 960.6,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 6.548
+			}
+		  ]
+		},
+		{
+		  "id": 64,
+		  "name": "Yolkaeli",
+		  "x": 651,
+		  "y": 971,
+		  "towns": [
+			{
+			  "id": 80,
+			  "name": "Garer",
+			  "x": 672.5,
+			  "y": 985.64,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 6.353
+			},
+			{
+			  "id": 146,
+			  "name": "Akdi",
+			  "x": 652.1,
+			  "y": 980.9,
+			  "capital": 0,
+			  "culture": 13,
+			  "population": 1.866
+			}
+		  ]
+		},
+		{
+		  "id": 65,
+		  "name": "Sardahazia",
+		  "x": 1164,
+		  "y": 595,
+		  "towns": []
+		},
+		{
+		  "id": 66,
+		  "name": "Bongenland",
+		  "x": 820,
+		  "y": 762,
+		  "towns": []
+		}
+	  ]
+	},
+	{
+	  "id": 6,
+	  "name": "Emaa",
+	  "x": 708,
+	  "y": 555,
+	  "area": 60627,
+	  "neighbors": [
+		1,
+		3,
+		7
+	  ],
+	  "urban": 174.07599999999996,
+	  "rural": 3398.0121847093105,
+	  "diplomacy": [
+		"x",
+		"Suspicion",
+		"Neutral",
+		"Ally",
+		"Unknown",
+		"Neutral",
+		"x",
+		"Neutral",
+		"Ally",
+		"Neutral",
+		"Neutral"
+	  ],
+	  "sectors": [
+		{
+		  "id": 17,
+		  "name": "Kinenmaa",
+		  "x": 626,
+		  "y": 381,
+		  "towns": [
+			{
+			  "id": 149,
+			  "name": "Loksa",
+			  "x": 620.54,
+			  "y": 378.84,
+			  "capital": 1,
+			  "culture": 10,
+			  "population": 21.853
+			},
+			{
+			  "id": 169,
+			  "name": "Mesch",
+			  "x": 594.83,
+			  "y": 393.72,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 8.987
+			},
+			{
+			  "id": 324,
+			  "name": "Vseyasko",
+			  "x": 602.11,
+			  "y": 366.23,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 10.859
+			}
+		  ]
+		},
+		{
+		  "id": 18,
+		  "name": "Kiuva",
+		  "x": 617,
+		  "y": 334,
+		  "towns": [
+			{
+			  "id": 22,
+			  "name": "Mtsen",
+			  "x": 628.04,
+			  "y": 314.74,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 7.861
+			},
+			{
+			  "id": 90,
+			  "name": "Emikaakuri",
+			  "x": 631.03,
+			  "y": 353.85,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 2.111
+			},
+			{
+			  "id": 147,
+			  "name": "Torgam",
+			  "x": 643.35,
+			  "y": 328.81,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 1.945
+			},
+			{
+			  "id": 162,
+			  "name": "Morod",
+			  "x": 619.33,
+			  "y": 304.11,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 19.472
+			},
+			{
+			  "id": 264,
+			  "name": "Kiuva",
+			  "x": 612.57,
+			  "y": 346.75,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 15.427
+			}
+		  ]
+		},
+		{
+		  "id": 67,
+		  "name": "Jamsalakia",
+		  "x": 700,
+		  "y": 418,
+		  "towns": [
+			{
+			  "id": 84,
+			  "name": "Karkkari",
+			  "x": 665.7,
+			  "y": 338.96,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 3.603
+			},
+			{
+			  "id": 185,
+			  "name": "Naanala",
+			  "x": 743.99,
+			  "y": 398.67,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 9.144
+			},
+			{
+			  "id": 235,
+			  "name": "Kunkimaaja",
+			  "x": 716.01,
+			  "y": 463.67,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 7.9
+			},
+			{
+			  "id": 281,
+			  "name": "Heinase",
+			  "x": 723.96,
+			  "y": 422.28,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 6.433
+			},
+			{
+			  "id": 283,
+			  "name": "Napoleruve",
+			  "x": 639.35,
+			  "y": 470.74,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 0.661
+			},
+			{
+			  "id": 288,
+			  "name": "Vaakkaluna",
+			  "x": 684.69,
+			  "y": 382.95,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 0.956
+			},
+			{
+			  "id": 290,
+			  "name": "Kakoskives",
+			  "x": 694.53,
+			  "y": 444.33,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 7.789
+			},
+			{
+			  "id": 384,
+			  "name": "Hylori",
+			  "x": 650.82,
+			  "y": 339.3,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 3.962
+			}
+		  ]
+		},
+		{
+		  "id": 68,
+		  "name": "Malvi",
+		  "x": 590,
+		  "y": 404,
+		  "towns": [
+			{
+			  "id": 139,
+			  "name": "Malvi",
+			  "x": 593.46,
+			  "y": 407.86,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 13.72
+			}
+		  ]
+		},
+		{
+		  "id": 69,
+		  "name": "Nuvuski",
+		  "x": 672,
+		  "y": 522,
+		  "towns": [
+			{
+			  "id": 252,
+			  "name": "Rupunkyla",
+			  "x": 612.74,
+			  "y": 464.53,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 1.764
+			},
+			{
+			  "id": 313,
+			  "name": "Kusivijarma",
+			  "x": 728.88,
+			  "y": 503.31,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 0.67
+			},
+			{
+			  "id": 328,
+			  "name": "Syrhova",
+			  "x": 662.83,
+			  "y": 567.12,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 2.613
+			},
+			{
+			  "id": 348,
+			  "name": "Maulakini",
+			  "x": 642.76,
+			  "y": 497.71,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 1.41
+			}
+		  ]
+		},
+		{
+		  "id": 70,
+		  "name": "Oviiti",
+		  "x": 766,
+		  "y": 532,
+		  "towns": [
+			{
+			  "id": 297,
+			  "name": "Oviiti",
+			  "x": 752.38,
+			  "y": 485.31,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 5.851
+			},
+			{
+			  "id": 361,
+			  "name": "Some",
+			  "x": 798,
+			  "y": 519.2,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 0.791
+			}
+		  ]
+		},
+		{
+		  "id": 71,
+		  "name": "Tortia",
+		  "x": 755,
+		  "y": 656,
+		  "towns": [
+			{
+			  "id": 102,
+			  "name": "Lugedagan",
+			  "x": 804.13,
+			  "y": 571.6,
+			  "capital": 0,
+			  "culture": 5,
+			  "population": 14.777
+			},
+			{
+			  "id": 107,
+			  "name": "Valgartola",
+			  "x": 823.24,
+			  "y": 563.17,
+			  "capital": 0,
+			  "culture": 5,
+			  "population": 1.791
+			}
+		  ]
+		},
+		{
+		  "id": 72,
+		  "name": "Varvi",
+		  "x": 693,
+		  "y": 654,
+		  "towns": [
+			{
+			  "id": 349,
+			  "name": "Varvi",
+			  "x": 685.66,
+			  "y": 594.28,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 0.615
+			},
+			{
+			  "id": 379,
+			  "name": "Kuranta",
+			  "x": 695.41,
+			  "y": 673.76,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 1.111
+			}
+		  ]
+		},
+		{
+		  "id": 73,
+		  "name": "Lorodub",
+		  "x": 615,
+		  "y": 299,
+		  "towns": []
+		},
+		{
+		  "id": 74,
+		  "name": "Rauresia",
+		  "x": 767,
+		  "y": 709,
+		  "towns": []
+		}
+	  ]
+	},
+	{
+	  "id": 7,
+	  "name": "Garenia",
+	  "x": 820,
+	  "y": 709,
+	  "area": 21882,
+	  "neighbors": [
+		10,
+		3,
+		6,
+		5,
+		1
+	  ],
+	  "urban": 89.33800000000001,
+	  "rural": 1252.053353458643,
+	  "diplomacy": [
+		"x",
+		"Ally",
+		"Neutral",
+		"Neutral",
+		"Neutral",
+		"Vassal",
+		"Neutral",
+		"x",
+		"Neutral",
+		"Friendly",
+		"Ally"
+	  ],
+	  "sectors": [
+		{
+		  "id": 19,
+		  "name": "Broney",
+		  "x": 912,
+		  "y": 629,
+		  "towns": [
+			{
+			  "id": 193,
+			  "name": "Matonmouth",
+			  "x": 911.66,
+			  "y": 608.15,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 1.291
+			},
+			{
+			  "id": 266,
+			  "name": "Cudgeroe",
+			  "x": 895.91,
+			  "y": 626.38,
+			  "capital": 1,
+			  "culture": 2,
+			  "population": 17.541
+			},
+			{
+			  "id": 302,
+			  "name": "Marasaldon",
+			  "x": 925.62,
+			  "y": 639.15,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 0.764
+			},
+			{
+			  "id": 351,
+			  "name": "Shomer",
+			  "x": 910.08,
+			  "y": 634.06,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 6.932
+			}
+		  ]
+		},
+		{
+		  "id": 20,
+		  "name": "Ayme",
+		  "x": 894,
+		  "y": 651,
+		  "towns": [
+			{
+			  "id": 240,
+			  "name": "Bretham",
+			  "x": 887.26,
+			  "y": 642.24,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 9.697
+			}
+		  ]
+		},
+		{
+		  "id": 75,
+		  "name": "Neulonteaulet",
+		  "x": 954,
+		  "y": 585,
+		  "towns": [
+			{
+			  "id": 48,
+			  "name": "Neulonteaulet",
+			  "x": 987.3,
+			  "y": 501.4,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.65
+			},
+			{
+			  "id": 55,
+			  "name": "Chawcescom",
+			  "x": 970.49,
+			  "y": 530.09,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 8.628
+			},
+			{
+			  "id": 63,
+			  "name": "Mantala",
+			  "x": 924.8,
+			  "y": 592.9,
+			  "capital": 0,
+			  "culture": 5,
+			  "population": 1.735
+			},
+			{
+			  "id": 99,
+			  "name": "Macker",
+			  "x": 999.7,
+			  "y": 533.2,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 1.732
+			},
+			{
+			  "id": 164,
+			  "name": "Sobury",
+			  "x": 977.16,
+			  "y": 561.96,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 6.194
+			},
+			{
+			  "id": 218,
+			  "name": "Louzy",
+			  "x": 1008.69,
+			  "y": 515.91,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 6.169
+			},
+			{
+			  "id": 301,
+			  "name": "Folefordge",
+			  "x": 990.99,
+			  "y": 518.78,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 1.687
+			},
+			{
+			  "id": 315,
+			  "name": "Nordenley",
+			  "x": 950.4,
+			  "y": 619.2,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 4.68
+			}
+		  ]
+		},
+		{
+		  "id": 76,
+		  "name": "Raversia",
+		  "x": 996,
+		  "y": 626,
+		  "towns": [
+			{
+			  "id": 18,
+			  "name": "Thivevillevil",
+			  "x": 973.67,
+			  "y": 617.84,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 7.297
+			},
+			{
+			  "id": 275,
+			  "name": "Givry",
+			  "x": 988.42,
+			  "y": 641.22,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.894
+			}
+		  ]
+		},
+		{
+		  "id": 77,
+		  "name": "Portsteria",
+		  "x": 818,
+		  "y": 702,
+		  "towns": [
+			{
+			  "id": 236,
+			  "name": "Marltontef",
+			  "x": 870.72,
+			  "y": 628.79,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 2.526
+			},
+			{
+			  "id": 248,
+			  "name": "Portsheadge",
+			  "x": 885.18,
+			  "y": 691.3,
+			  "capital": 0,
+			  "culture": 2,
+			  "population": 0.652
+			},
+			{
+			  "id": 352,
+			  "name": "Suhadhaztida",
+			  "x": 917.92,
+			  "y": 686.75,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 8.269
+			}
+		  ]
+		},
+		{
+		  "id": 78,
+		  "name": "Nortland",
+		  "x": 932,
+		  "y": 629,
+		  "towns": []
+		},
+		{
+		  "id": 79,
+		  "name": "Einautenia",
+		  "x": 774,
+		  "y": 736,
+		  "towns": []
+		}
+	  ]
+	},
+	{
+	  "id": 8,
+	  "name": "Holsia",
+	  "x": 715,
+	  "y": 245,
+	  "area": 56790,
+	  "neighbors": [
+		4,
+		0,
+		1
+	  ],
+	  "urban": 368.56899999999996,
+	  "rural": 4007.966735124588,
+	  "diplomacy": [
+		"x",
+		"Suspicion",
+		"Friendly",
+		"Neutral",
+		"Suspicion",
+		"Neutral",
+		"Ally",
+		"Neutral",
+		"x",
+		"Unknown",
+		"Neutral"
+	  ],
+	  "sectors": [
+		{
+		  "id": 21,
+		  "name": "Kjelsopa",
+		  "x": 715,
+		  "y": 296,
+		  "towns": [
+			{
+			  "id": 30,
+			  "name": "Piekka",
+			  "x": 725.2,
+			  "y": 335.7,
+			  "capital": 0,
+			  "culture": 10,
+			  "population": 1.69
+			},
+			{
+			  "id": 224,
+			  "name": "Kjelsopa",
+			  "x": 710.92,
+			  "y": 305.4,
+			  "capital": 1,
+			  "culture": 7,
+			  "population": 17.604
+			},
+			{
+			  "id": 278,
+			  "name": "Straunah",
+			  "x": 746.31,
+			  "y": 292.45,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.445
+			},
+			{
+			  "id": 381,
+			  "name": "Sandvi",
+			  "x": 722.52,
+			  "y": 269.11,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 3.853
+			},
+			{
+			  "id": 382,
+			  "name": "Straududu",
+			  "x": 737.73,
+			  "y": 314.96,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 4.003
+			}
+		  ]
+		},
+		{
+		  "id": 22,
+		  "name": "Myriveria",
+		  "x": 788,
+		  "y": 366,
+		  "towns": [
+			{
+			  "id": 56,
+			  "name": "Holland",
+			  "x": 788.77,
+			  "y": 342.58,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 17.554
+			},
+			{
+			  "id": 129,
+			  "name": "Unnsetso",
+			  "x": 772.78,
+			  "y": 371.94,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 33.863
+			},
+			{
+			  "id": 295,
+			  "name": "Valdugavik",
+			  "x": 767.54,
+			  "y": 347.05,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.944
+			},
+			{
+			  "id": 308,
+			  "name": "Lennosen",
+			  "x": 779.08,
+			  "y": 359.08,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.691
+			}
+		  ]
+		},
+		{
+		  "id": 23,
+		  "name": "Teia",
+		  "x": 650,
+		  "y": 272,
+		  "towns": [
+			{
+			  "id": 64,
+			  "name": "Togoslari",
+			  "x": 677.21,
+			  "y": 281.79,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 8.189
+			},
+			{
+			  "id": 70,
+			  "name": "Tertolyhov",
+			  "x": 623.76,
+			  "y": 267.48,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 5.843
+			},
+			{
+			  "id": 72,
+			  "name": "Chetka",
+			  "x": 646.96,
+			  "y": 273.49,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 24.098
+			},
+			{
+			  "id": 173,
+			  "name": "Pinsk",
+			  "x": 650.97,
+			  "y": 293.24,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 9.957
+			},
+			{
+			  "id": 177,
+			  "name": "Gogonok",
+			  "x": 623.4,
+			  "y": 249.8,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 21.052
+			},
+			{
+			  "id": 207,
+			  "name": "Kosalsk",
+			  "x": 638.8,
+			  "y": 255,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 19.761
+			}
+		  ]
+		},
+		{
+		  "id": 80,
+		  "name": "Menestadia",
+		  "x": 704,
+		  "y": 218,
+		  "towns": [
+			{
+			  "id": 15,
+			  "name": "Kefsos",
+			  "x": 774.2,
+			  "y": 184.95,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.662
+			},
+			{
+			  "id": 34,
+			  "name": "Rechigoro",
+			  "x": 607.93,
+			  "y": 221.55,
+			  "capital": 0,
+			  "culture": 6,
+			  "population": 7.592
+			},
+			{
+			  "id": 116,
+			  "name": "Kjeldela",
+			  "x": 630.9,
+			  "y": 161.3,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 15.817
+			},
+			{
+			  "id": 124,
+			  "name": "Lauvograv",
+			  "x": 718.21,
+			  "y": 178.8,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 15.515
+			},
+			{
+			  "id": 161,
+			  "name": "Reykki",
+			  "x": 703.84,
+			  "y": 143.14,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 13.745
+			},
+			{
+			  "id": 172,
+			  "name": "Hvamstan",
+			  "x": 661.43,
+			  "y": 227.93,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 15.673
+			},
+			{
+			  "id": 184,
+			  "name": "Hrafjor",
+			  "x": 718.04,
+			  "y": 210.51,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 0.811
+			},
+			{
+			  "id": 203,
+			  "name": "Holdegils",
+			  "x": 789.5,
+			  "y": 183.8,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.777
+			},
+			{
+			  "id": 245,
+			  "name": "Grenestad",
+			  "x": 664.11,
+			  "y": 146.21,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 8.144
+			},
+			{
+			  "id": 256,
+			  "name": "Sofjordur",
+			  "x": 638.08,
+			  "y": 221.59,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 3.92
+			},
+			{
+			  "id": 304,
+			  "name": "Sigloyda",
+			  "x": 682.37,
+			  "y": 229.02,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 16.083
+			},
+			{
+			  "id": 305,
+			  "name": "Stamstande",
+			  "x": 757.14,
+			  "y": 252.72,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 2.409
+			},
+			{
+			  "id": 312,
+			  "name": "Bjorfug",
+			  "x": 679.75,
+			  "y": 208.69,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 0.659
+			},
+			{
+			  "id": 332,
+			  "name": "Sillavik",
+			  "x": 687.03,
+			  "y": 168.11,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 4.519
+			},
+			{
+			  "id": 391,
+			  "name": "Ulvsbotn",
+			  "x": 701.83,
+			  "y": 162.75,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 4.636
+			}
+		  ]
+		},
+		{
+		  "id": 81,
+		  "name": "Onsmyken",
+		  "x": 851,
+		  "y": 179,
+		  "towns": [
+			{
+			  "id": 143,
+			  "name": "Sillavolen",
+			  "x": 813.18,
+			  "y": 173.59,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 8.888
+			},
+			{
+			  "id": 199,
+			  "name": "Korvika",
+			  "x": 849.02,
+			  "y": 147.27,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 4.793
+			},
+			{
+			  "id": 334,
+			  "name": "Nestad",
+			  "x": 809.32,
+			  "y": 247.68,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 0.667
+			}
+		  ]
+		},
+		{
+		  "id": 82,
+		  "name": "Holaria",
+		  "x": 804,
+		  "y": 302,
+		  "towns": [
+			{
+			  "id": 7,
+			  "name": "Lopsber",
+			  "x": 768.36,
+			  "y": 265.45,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 3.168
+			},
+			{
+			  "id": 111,
+			  "name": "Hafnir",
+			  "x": 757.46,
+			  "y": 273.22,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 2.001
+			},
+			{
+			  "id": 125,
+			  "name": "Laumenha",
+			  "x": 794.17,
+			  "y": 300.97,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 8.589
+			}
+		  ]
+		},
+		{
+		  "id": 83,
+		  "name": "Mos",
+		  "x": 881,
+		  "y": 435,
+		  "towns": [
+			{
+			  "id": 186,
+			  "name": "Hautarda",
+			  "x": 832.07,
+			  "y": 426.41,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 8.55
+			},
+			{
+			  "id": 296,
+			  "name": "Tverbak",
+			  "x": 903.87,
+			  "y": 397.62,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.41
+			},
+			{
+			  "id": 336,
+			  "name": "Stamsey",
+			  "x": 840.56,
+			  "y": 325.89,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 5.137
+			},
+			{
+			  "id": 339,
+			  "name": "Sofjornoy",
+			  "x": 848.95,
+			  "y": 415.08,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.232
+			},
+			{
+			  "id": 358,
+			  "name": "Hrafjor",
+			  "x": 891.61,
+			  "y": 409.41,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 0.69
+			},
+			{
+			  "id": 386,
+			  "name": "Blokholt",
+			  "x": 855.09,
+			  "y": 443.93,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 12.308
+			}
+		  ]
+		},
+		{
+		  "id": 84,
+		  "name": "Roforsvika",
+		  "x": 948,
+		  "y": 433,
+		  "towns": [
+			{
+			  "id": 13,
+			  "name": "Thordal",
+			  "x": 924.27,
+			  "y": 441.75,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.771
+			},
+			{
+			  "id": 36,
+			  "name": "Unnstad",
+			  "x": 934.65,
+			  "y": 443.36,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 2.594
+			},
+			{
+			  "id": 57,
+			  "name": "Roforsvika",
+			  "x": 965.82,
+			  "y": 421.1,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 3.438
+			},
+			{
+			  "id": 157,
+			  "name": "Narres",
+			  "x": 981.43,
+			  "y": 438.55,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 12.881
+			},
+			{
+			  "id": 192,
+			  "name": "Reykki",
+			  "x": 904.6,
+			  "y": 457,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.817
+			},
+			{
+			  "id": 201,
+			  "name": "Laugavo",
+			  "x": 958.68,
+			  "y": 449.98,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.829
+			}
+		  ]
+		},
+		{
+		  "id": 85,
+		  "name": "Bosfells",
+		  "x": 869,
+		  "y": 467,
+		  "towns": [
+			{
+			  "id": 282,
+			  "name": "Bosfells",
+			  "x": 895.04,
+			  "y": 465.44,
+			  "capital": 0,
+			  "culture": 7,
+			  "population": 1.297
+			}
+		  ]
+		},
+		{
+		  "id": 86,
+		  "name": "Sorough",
+		  "x": 976,
+		  "y": 94,
+		  "towns": []
+		}
+	  ]
+	},
+	{
+	  "id": 9,
+	  "name": "Dalasz",
+	  "x": 1324,
+	  "y": 436,
+	  "area": 37102,
+	  "neighbors": [
+		10
+	  ],
+	  "urban": 346.59100000000007,
+	  "rural": 3522.4426367282867,
+	  "diplomacy": [
+		"x",
+		"Neutral",
+		"Neutral",
+		"Neutral",
+		"Neutral",
+		"Friendly",
+		"Neutral",
+		"Friendly",
+		"Unknown",
+		"x",
+		"Friendly"
+	  ],
+	  "sectors": [
+		{
+		  "id": 24,
+		  "name": "Ujsmiz",
+		  "x": 1271,
+		  "y": 452,
+		  "towns": [
+			{
+			  "id": 14,
+			  "name": "Kunsla",
+			  "x": 1252.14,
+			  "y": 455.83,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 3.349
+			},
+			{
+			  "id": 260,
+			  "name": "Deresenyske",
+			  "x": 1258.6,
+			  "y": 467.41,
+			  "capital": 1,
+			  "culture": 12,
+			  "population": 30.557
+			}
+		  ]
+		},
+		{
+		  "id": 25,
+		  "name": "Levecsed",
+		  "x": 1368,
+		  "y": 470,
+		  "towns": [
+			{
+			  "id": 141,
+			  "name": "Nazakorarospa",
+			  "x": 1378.66,
+			  "y": 462.44,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.616
+			},
+			{
+			  "id": 360,
+			  "name": "Koszentmik",
+			  "x": 1380.11,
+			  "y": 481.5,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 21.885
+			}
+		  ]
+		},
+		{
+		  "id": 26,
+		  "name": "Csaktavecser",
+		  "x": 1348,
+		  "y": 512,
+		  "towns": [
+			{
+			  "id": 16,
+			  "name": "Batmik",
+			  "x": 1339.58,
+			  "y": 519.57,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.624
+			},
+			{
+			  "id": 284,
+			  "name": "Csaktavecser",
+			  "x": 1359.6,
+			  "y": 524.96,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 19.856
+			}
+		  ]
+		},
+		{
+		  "id": 87,
+		  "name": "Tetmikia",
+		  "x": 1335,
+		  "y": 387,
+		  "towns": [
+			{
+			  "id": 28,
+			  "name": "Dezoturgyar",
+			  "x": 1384.18,
+			  "y": 321.25,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 15.279
+			},
+			{
+			  "id": 53,
+			  "name": "Tisorindok",
+			  "x": 1391.45,
+			  "y": 368.93,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 2.551
+			},
+			{
+			  "id": 89,
+			  "name": "Batigetvanhe",
+			  "x": 1405.56,
+			  "y": 344.97,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 6.394
+			},
+			{
+			  "id": 155,
+			  "name": "Gyoturdokol",
+			  "x": 1358.6,
+			  "y": 342.23,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 9.34
+			},
+			{
+			  "id": 175,
+			  "name": "Nyerkesalok",
+			  "x": 1392.87,
+			  "y": 417.28,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 16.269
+			},
+			{
+			  "id": 258,
+			  "name": "Pakszentg",
+			  "x": 1328.95,
+			  "y": 348.17,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 4.994
+			},
+			{
+			  "id": 280,
+			  "name": "Izlapolva",
+			  "x": 1357.5,
+			  "y": 400.21,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.93
+			},
+			{
+			  "id": 347,
+			  "name": "Kunsvar",
+			  "x": 1326.91,
+			  "y": 410.09,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.381
+			},
+			{
+			  "id": 357,
+			  "name": "Saverdi",
+			  "x": 1309.96,
+			  "y": 362.77,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 3.735
+			},
+			{
+			  "id": 370,
+			  "name": "Csakloszorany",
+			  "x": 1364.32,
+			  "y": 362.14,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 8.653
+			}
+		  ]
+		},
+		{
+		  "id": 88,
+		  "name": "Triveses",
+		  "x": 1217,
+		  "y": 374,
+		  "towns": [
+			{
+			  "id": 47,
+			  "name": "Correres",
+			  "x": 1268.14,
+			  "y": 338.3,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 18.737
+			},
+			{
+			  "id": 59,
+			  "name": "Vigny",
+			  "x": 1133.01,
+			  "y": 412.74,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 17.718
+			},
+			{
+			  "id": 67,
+			  "name": "Chuelleresmo",
+			  "x": 1171.7,
+			  "y": 340.8,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 9.208
+			},
+			{
+			  "id": 81,
+			  "name": "Hajdurapiosza",
+			  "x": 1228.91,
+			  "y": 429.75,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 11.05
+			},
+			{
+			  "id": 91,
+			  "name": "Damavey",
+			  "x": 1094.5,
+			  "y": 387.8,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.79
+			},
+			{
+			  "id": 96,
+			  "name": "Chamilly",
+			  "x": 1126.6,
+			  "y": 385.22,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 7.179
+			},
+			{
+			  "id": 101,
+			  "name": "Chazocheaux",
+			  "x": 1112.94,
+			  "y": 402.57,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 6.117
+			},
+			{
+			  "id": 118,
+			  "name": "Briaran",
+			  "x": 1238.92,
+			  "y": 322.17,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 12.516
+			},
+			{
+			  "id": 138,
+			  "name": "Panny",
+			  "x": 1192.6,
+			  "y": 330.9,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.852
+			},
+			{
+			  "id": 156,
+			  "name": "Boubernoidy",
+			  "x": 1137.35,
+			  "y": 350.84,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.871
+			},
+			{
+			  "id": 170,
+			  "name": "Pecszeglod",
+			  "x": 1247.34,
+			  "y": 443.51,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 7.515
+			},
+			{
+			  "id": 196,
+			  "name": "Ivrairolter",
+			  "x": 1106.58,
+			  "y": 384.12,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 11.108
+			},
+			{
+			  "id": 209,
+			  "name": "Geauzon",
+			  "x": 1185.18,
+			  "y": 404.38,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 9.704
+			},
+			{
+			  "id": 212,
+			  "name": "Kagyar",
+			  "x": 1204.1,
+			  "y": 421.7,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 11.281
+			},
+			{
+			  "id": 231,
+			  "name": "Gyaljaujfany",
+			  "x": 1142.52,
+			  "y": 380.6,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 3.08
+			},
+			{
+			  "id": 234,
+			  "name": "Kenhevecsed",
+			  "x": 1209.11,
+			  "y": 368.31,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 4.324
+			},
+			{
+			  "id": 259,
+			  "name": "Budavatak",
+			  "x": 1162.07,
+			  "y": 368.23,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 3.813
+			},
+			{
+			  "id": 272,
+			  "name": "Bacsiget",
+			  "x": 1265.17,
+			  "y": 379.75,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 7.208
+			},
+			{
+			  "id": 372,
+			  "name": "Garteshalkaza",
+			  "x": 1214.72,
+			  "y": 393.51,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 5.862
+			},
+			{
+			  "id": 373,
+			  "name": "Jaszlo",
+			  "x": 1226.42,
+			  "y": 398.39,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 0.779
+			},
+			{
+			  "id": 385,
+			  "name": "Ouilleville",
+			  "x": 1129.71,
+			  "y": 356.59,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 8.521
+			}
+		  ]
+		},
+		{
+		  "id": 89,
+		  "name": "Auvy",
+		  "x": 1089,
+		  "y": 414,
+		  "towns": [
+			{
+			  "id": 58,
+			  "name": "Chadondales",
+			  "x": 1097.52,
+			  "y": 409.01,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.577
+			}
+		  ]
+		},
+		{
+		  "id": 90,
+		  "name": "Zabanyver",
+		  "x": 1316,
+		  "y": 481,
+		  "towns": [
+			{
+			  "id": 31,
+			  "name": "Kenhelek",
+			  "x": 1285.78,
+			  "y": 475.03,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 15.843
+			},
+			{
+			  "id": 66,
+			  "name": "Gyalnadilisla",
+			  "x": 1322.07,
+			  "y": 500.07,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 11.112
+			},
+			{
+			  "id": 106,
+			  "name": "Sikvarpeny",
+			  "x": 1304.23,
+			  "y": 478.62,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 1.841
+			},
+			{
+			  "id": 195,
+			  "name": "Alaszorafura",
+			  "x": 1320.51,
+			  "y": 520.88,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 4.863
+			},
+			{
+			  "id": 387,
+			  "name": "Zabanyver",
+			  "x": 1298.6,
+			  "y": 461.86,
+			  "capital": 0,
+			  "culture": 12,
+			  "population": 0.709
+			}
+		  ]
+		},
+		{
+		  "id": 91,
+		  "name": "Jaszsolmamia",
+		  "x": 1400,
+		  "y": 417,
+		  "towns": []
+		}
+	  ]
+	},
+	{
+	  "id": 10,
+	  "name": "Anvilia",
+	  "x": 1074,
+	  "y": 618,
+	  "area": 19167,
+	  "neighbors": [
+		9,
+		7,
+		5
+	  ],
+	  "urban": 155.07999999999998,
+	  "rural": 1620.9476696252823,
+	  "diplomacy": [
+		"x",
+		"Ally",
+		"Neutral",
+		"Neutral",
+		"Neutral",
+		"Vassal",
+		"Neutral",
+		"Ally",
+		"Neutral",
+		"Friendly",
+		"x"
+	  ],
+	  "sectors": [
+		{
+		  "id": 27,
+		  "name": "Cevania",
+		  "x": 1082,
+		  "y": 507,
+		  "towns": [
+			{
+			  "id": 93,
+			  "name": "Meungny",
+			  "x": 1082.7,
+			  "y": 483.1,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 16.685
+			},
+			{
+			  "id": 136,
+			  "name": "Meungny",
+			  "x": 1070.89,
+			  "y": 495.86,
+			  "capital": 1,
+			  "culture": 3,
+			  "population": 29.898
+			},
+			{
+			  "id": 253,
+			  "name": "Chavers",
+			  "x": 1060.84,
+			  "y": 522.33,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.739
+			},
+			{
+			  "id": 274,
+			  "name": "Grannes",
+			  "x": 1100.4,
+			  "y": 492.6,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 3.35
+			}
+		  ]
+		},
+		{
+		  "id": 28,
+		  "name": "Conflansia",
+		  "x": 1074,
+		  "y": 670,
+		  "towns": [
+			{
+			  "id": 213,
+			  "name": "Mignelle",
+			  "x": 1095.23,
+			  "y": 663.52,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 8.8
+			},
+			{
+			  "id": 317,
+			  "name": "Pannecoq",
+			  "x": 1082.87,
+			  "y": 685.86,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 35.477
+			}
+		  ]
+		},
+		{
+		  "id": 92,
+		  "name": "New Conflansia",
+		  "x": 1018,
+		  "y": 491,
+		  "towns": [
+			{
+			  "id": 23,
+			  "name": "Feauzory",
+			  "x": 1073.47,
+			  "y": 436.78,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.623
+			},
+			{
+			  "id": 44,
+			  "name": "Chatillery",
+			  "x": 1061.22,
+			  "y": 420.88,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.732
+			},
+			{
+			  "id": 153,
+			  "name": "Dison",
+			  "x": 1023.82,
+			  "y": 481.78,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 19.039
+			}
+		  ]
+		},
+		{
+		  "id": 93,
+		  "name": "Laileresia",
+		  "x": 1057,
+		  "y": 613,
+		  "towns": [
+			{
+			  "id": 50,
+			  "name": "Morcellenay",
+			  "x": 1031.12,
+			  "y": 533.04,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 3.466
+			},
+			{
+			  "id": 204,
+			  "name": "Egnes",
+			  "x": 1108.78,
+			  "y": 644.9,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 5.493
+			},
+			{
+			  "id": 232,
+			  "name": "Cheauranneroy",
+			  "x": 1126.3,
+			  "y": 609.9,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 7.987
+			},
+			{
+			  "id": 247,
+			  "name": "Conflans",
+			  "x": 1016.99,
+			  "y": 561.94,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.819
+			},
+			{
+			  "id": 261,
+			  "name": "Neuzozie",
+			  "x": 1122.9,
+			  "y": 549.3,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 5.428
+			},
+			{
+			  "id": 285,
+			  "name": "Pavers",
+			  "x": 1035.22,
+			  "y": 600.64,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 0.623
+			},
+			{
+			  "id": 292,
+			  "name": "Champs",
+			  "x": 1037.39,
+			  "y": 572.69,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 2.721
+			},
+			{
+			  "id": 298,
+			  "name": "Moune",
+			  "x": 1109.4,
+			  "y": 531.9,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 1.96
+			},
+			{
+			  "id": 310,
+			  "name": "Mesmonts",
+			  "x": 1066.92,
+			  "y": 575.79,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 6.598
+			},
+			{
+			  "id": 314,
+			  "name": "Cercy",
+			  "x": 1109.86,
+			  "y": 592.29,
+			  "capital": 0,
+			  "culture": 3,
+			  "population": 0.642
+			}
+		  ]
+		},
+		{
+		  "id": 94,
+		  "name": "Charia",
+		  "x": 994,
+		  "y": 489,
+		  "towns": []
+		},
+		{
+		  "id": 95,
+		  "name": "New Cevania",
+		  "x": 1018,
+		  "y": 507,
+		  "towns": []
+		},
+		{
+		  "id": 96,
+		  "name": "Lignia",
+		  "x": 997,
+		  "y": 597,
+		  "towns": []
+		}
+	  ]
+	}
+  ],
+  "EmpireList": [
+	"Neutrals",
+	"Bubutia",
+	"Matia",
+	"Totia",
+	"Aberia",
+	"Fotia",
+	"Emaa",
+	"Garenia",
+	"Holsia",
+	"Dalasz",
+	"Anvilia"
+  ]
+}

@@ -1,0 +1,64 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dp0736bhvg871"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_togpo"]
+bg_color = Color(0.0407843, 0.0439216, 0.0658824, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.94902, 0.819608, 0.25098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpg5g"]
+bg_color = Color(0.0509804, 0.054902, 0.0823529, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.94902, 0.819608, 0.25098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6j2b"]
+bg_color = Color(0.854118, 0.737647, 0.225882, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_261js"]
+bg_color = Color(0.0509804, 0.054902, 0.0823529, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exybx"]
+bg_color = Color(0.0509804, 0.054902, 0.0823529, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxu3j"]
+bg_color = Color(0.0509804, 0.054902, 0.0823529, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+default_font_size = 14
+Button/colors/font_color = Color(0.94902, 0.819608, 0.25098, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_togpo")
+Button/styles/normal = SubResource("StyleBoxFlat_hpg5g")
+Button/styles/pressed = SubResource("StyleBoxFlat_q6j2b")
+Label/colors/font_color = Color(0.94902, 0.819608, 0.25098, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_261js")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_exybx")
+ScrollContainer/styles/panel = SubResource("StyleBoxFlat_bxu3j")
