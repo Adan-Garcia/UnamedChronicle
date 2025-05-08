@@ -12,15 +12,15 @@ func _intialize():
 
 
 func gather_saves():
-	if !FileAccess.file_exists("res://Resources/world.res"):
+	if !FileAccess.file_exists("res://src/resources/world.res"):
 		_create_world()
 
 	else:
-		CurrentWorldState = load("res://Resources/world.res")
+		CurrentWorldState = load("res://src/resources/world.res")
 
 
 func _create_world():
-	var file = FileAccess.open("res://pyscripts/heirarchy.json", FileAccess.READ)
+	var file = FileAccess.open("res://assets/map/heirarchy.json", FileAccess.READ)
 	var text = file.get_as_text()
 	var dict = str_to_var(text)
 	var World = WorldState.new()
@@ -28,7 +28,7 @@ func _create_world():
 	for empire in dict["Empires"]:
 		World.Empires[empire["name"]] = _dict_to_empire(empire, dict["EmpireList"])
 	CurrentWorldState = World
-	ResourceSaver.save(CurrentWorldState, "res://Resources/world.res")
+	ResourceSaver.save(CurrentWorldState, "res://src/resources/world.res")
 
 
 func _dict_to_empire(dict: Dictionary, list: Array) -> EmpireData:

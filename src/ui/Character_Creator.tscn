@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx7wicq7ffkrs"]
+[gd_scene load_steps=4 format=3 uid="uid://dx7wicq7ffkrs"]
 
 [ext_resource type="Script" uid="uid://djbgd6a5ov1vu" path="res://src/ui/scripts/selector_options.gd" id="1_3fkka"]
+[ext_resource type="Script" uid="uid://21pj0bo62pu3" path="res://src/ui/scripts/creator.gd" id="1_oggup"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ac4uf"]
-bg_color = Color(0.0235294, 0.027451, 0.054902, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwwtu"]
+bg_color = Color(0.08, 0.08, 0.08, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -20,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ac4uf")
+theme_override_styles/panel = SubResource("StyleBoxFlat_mwwtu")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -37,12 +38,13 @@ theme_override_constants/margin_bottom = 64
 [node name="TabContainer" type="TabContainer" parent="MarginContainer"]
 layout_mode = 2
 current_tab = 0
+script = ExtResource("1_oggup")
 
-[node name="Primary traits" type="Control" parent="MarginContainer/TabContainer"]
+[node name="Background" type="Control" parent="MarginContainer/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Primary traits"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,26 +56,115 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 32
 
-[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/TabContainer/Primary traits/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/Background/MarginContainer"]
 layout_mode = 2
-script = ExtResource("1_3fkka")
-Options = Dictionary[String, Dictionary]({
-"hello": {
-"type": "String"
-}
-})
+horizontal_scroll_mode = 0
 
-[node name="Character Traits" type="Control" parent="MarginContainer/TabContainer"]
+[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/TabContainer/Background/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_3fkka")
+category = "Background"
+
+[node name="Core Attributes" type="Control" parent="MarginContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="Utility skills" type="Control" parent="MarginContainer/TabContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Core Attributes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 32
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/Core Attributes/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/TabContainer/Core Attributes/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_3fkka")
+category = "Core Attributes"
+Options = {
+"hello": {
+"range": 5,
+"type": "range"
+}
+}
+
+[node name="Combat Skills" type="Control" parent="MarginContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="Combat skills" type="Control" parent="MarginContainer/TabContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Combat Skills"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 32
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/Combat Skills/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/TabContainer/Combat Skills/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_3fkka")
+category = "Combat Skills"
+Options = {
+"hello": {
+"range": 5,
+"type": "range"
+}
+}
+
+[node name="Special Skills" type="Control" parent="MarginContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Special Skills"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 32
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/Special Skills/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/TabContainer/Special Skills/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_3fkka")
+category = "Special Skills"
+Options = {
+"hello": {
+"range": 5,
+"type": "range"
+}
+}

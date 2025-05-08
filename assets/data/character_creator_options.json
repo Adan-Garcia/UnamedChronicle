@@ -1,0 +1,93 @@
+{
+  "Name": {
+	"type": "String",
+	"hint": "What do you wish to be called? (full name)",
+	"submitable": false,
+	"category": "Background"
+  },
+ "Class": {
+	"type":"Option",
+	"hint":"What are you? (Base class)",
+	"category":"Background"
+},
+  "Strength": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How strong are you?",
+	"category": "Core Attributes"
+  },
+  "Agility": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How fast or nimble are you on your feet?",
+	"category": "Core Attributes"
+  },
+  "Endurance": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How much can you take before breaking? ",
+	"category": "Core Attributes"
+  },
+  "Intelligence": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How intelligent are you?",
+	"category": "Core Attributes"
+  },
+  "Charisma": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How easily do you influence or connect with others?",
+	"category": "Core Attributes"
+  },
+  "MaxMana": {
+	"type": "range",
+	"range": [0, 100],
+	"hint": "How much magical energy can you hold?",
+	"category": "Core Attributes"
+  },
+
+  "Melee": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How skilled are you in close combat?",
+	"category": "Combat Skills"
+  },
+  "Ranged": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How accurate are you with ranged attacks?",
+	"category": "Combat Skills"
+  },
+  "Defense": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How well can you guard or protect yourself?",
+	"category": "Combat Skills"
+  },
+
+  "Stealth": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How good are you at avoiding attention?",
+	"category": "Special Skills"
+  },
+  "Tracking": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How well can you follow people, paths, or trails?",
+	"category": "Special Skills"
+  },
+  "Tactics": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How strategically do you approach challenges?",
+	"category": "Special Skills"
+  },
+  "Perception": {
+	"type": "range",
+	"range": [0, 20],
+	"hint": "How observant are you of your surroundings?",
+	"category": "Special Skills"
+  }
+}

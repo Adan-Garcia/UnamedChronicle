@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dtuye304s4xr7"]
 
-[ext_resource type="Script" path="res://src/systems/narrative/scripts/message.gd" id="1_d26o2"]
+[ext_resource type="Script" uid="uid://bhbp4yld8on2x" path="res://src/systems/narrative/scripts/message.gd" id="1_d26o2"]
 
 [node name="Message" type="RichTextLabel"]
 anchors_preset = 15

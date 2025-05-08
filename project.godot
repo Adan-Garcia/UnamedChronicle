@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="AI"
-run/main_scene="uid://br0qdo5b6l08s"
+run/main_scene="uid://dx7wicq7ffkrs"
 config/features=PackedStringArray("4.4")
 run/low_processor_mode=true
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://scenes/global.tscn"
+Global="*res://src/systems/logic/global.tscn"
 
 [display]
 
@@ -46,6 +46,7 @@ folder_colors={
 [gui]
 
 fonts/dynamic_fonts/use_oversampling=false
-theme/custom_font="uid://byl2nr4duabis"
+theme/custom="uid://cydhf7xal05to"
+theme/custom_font="uid://cg0hblwsffpue"
 theme/default_font_multichannel_signed_distance_field=true
 theme/default_font_generate_mipmaps=true

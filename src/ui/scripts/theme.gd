@@ -15,7 +15,7 @@ var card = Color("#0d0e15")
 
 func setup():
 	# Output theme resource path
-	set_save_path("res://themes/ui_theme.tres")
+	set_save_path("res://assets/ui/themes/ui_theme.tres")
 
 
 func define_theme():
@@ -121,7 +121,13 @@ func define_theme():
 	# Tabs & Menus
 	define_style(
 		"TabContainer",
-		{"tab_fg": pane, "tab_hover_fg": darkened, "tab_pressed_fg": pressed, "focus": empty_focus}
+		{
+			"tab_unselected": pane,
+			"tab_hover": darkened,
+			"tab_selected": pressed,
+			"tab_focus": empty_focus,
+			"panel": pane
+		}
 	)
 	define_style("OptionButton", {"select": outlined, "popup": pane, "focus": empty_focus})
 	define_style(
