@@ -3,12 +3,14 @@ extends HBoxContainer
 @export var slider_range: int
 @export var value: int
 @onready var manager: TabContainer = $"../../../../../"
+var category: String
+signal updated(value: int)
 
 
 func _ready():
 	$Slider.max_value = slider_range
-	value = round(slider_range / 2.0)
-	$Slider.value = round(slider_range / 2.0)
+	value = 0
+	$Slider.value = 0
 	$Value.text = str(int(value))
 	if slider_range <= 5:
 		$Slider.tick_count = slider_range + 1
@@ -20,7 +22,9 @@ func _update_value():
 
 
 func value_change(val: float):
-	if val > value:
-		print(manager.total_score)
-	value = int(val)
-	$Value.text = str(int(val))
+	if manager._cap_scores(name, val):
+		value = int(val)
+		emit_signal("updated", category)
+	else:
+		$Slider.value = value
+	$Value.text = str(int(value))

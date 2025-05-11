@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://21pj0bo62pu3" path="res://src/ui/scripts/creator.gd" id="1_oggup"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwwtu"]
-bg_color = Color(0.08, 0.08, 0.08, 1)
+bg_color = Color(0.00974413, 0.0109286, 0.0158595, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -35,16 +35,21 @@ theme_override_constants/margin_top = 96
 theme_override_constants/margin_right = 128
 theme_override_constants/margin_bottom = 64
 
-[node name="TabContainer" type="TabContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 current_tab = 0
 script = ExtResource("1_oggup")
 
-[node name="Background" type="Control" parent="MarginContainer/TabContainer"]
+[node name="Background" type="Control" parent="MarginContainer/VBoxContainer/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Background"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer/Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -56,23 +61,23 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 32
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/Background/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/TabContainer/Background/MarginContainer"]
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/TabContainer/Background/MarginContainer/ScrollContainer"]
+[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Background/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_3fkka")
 category = "Background"
 
-[node name="Core Attributes" type="Control" parent="MarginContainer/TabContainer"]
+[node name="Core Attributes" type="Control" parent="MarginContainer/VBoxContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Core Attributes"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer/Core Attributes"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -84,11 +89,11 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 32
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/Core Attributes/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/TabContainer/Core Attributes/MarginContainer"]
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/TabContainer/Core Attributes/MarginContainer/ScrollContainer"]
+[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Core Attributes/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -101,12 +106,12 @@ Options = {
 }
 }
 
-[node name="Combat Skills" type="Control" parent="MarginContainer/TabContainer"]
+[node name="Combat Skills" type="Control" parent="MarginContainer/VBoxContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Combat Skills"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer/Combat Skills"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -118,11 +123,11 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 32
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/Combat Skills/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/TabContainer/Combat Skills/MarginContainer"]
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/TabContainer/Combat Skills/MarginContainer/ScrollContainer"]
+[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Combat Skills/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -135,12 +140,12 @@ Options = {
 }
 }
 
-[node name="Special Skills" type="Control" parent="MarginContainer/TabContainer"]
+[node name="Special Skills" type="Control" parent="MarginContainer/VBoxContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Special Skills"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer/Special Skills"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -152,11 +157,11 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 32
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/Special Skills/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/TabContainer/Special Skills/MarginContainer"]
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/TabContainer/Special Skills/MarginContainer/ScrollContainer"]
+[node name="Selector_Options" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Special Skills/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -168,3 +173,44 @@ Options = {
 "type": "range"
 }
 }
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_type_variation = &"bottom"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Points Remaining:"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Back
+"
+
+[node name="Next" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Next
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Back" to="MarginContainer/VBoxContainer/TabContainer" method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Next" to="MarginContainer/VBoxContainer/TabContainer" method="_on_next_pressed"]

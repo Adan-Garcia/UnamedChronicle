@@ -36,7 +36,7 @@ func define_theme():
 	var empty_focus = stylebox_empty({})
 
 	# Additional styleboxes
-	var check_style = stylebox_flat({bg_color = primary, corners_ = corner_radius(4)})
+
 	var radio_style = stylebox_flat({bg_color = primary, corners_ = corner_radius(8)})
 	var selection_style = stylebox_flat(
 		{bg_color = primary.darkened(0.2), corners_ = corner_radius(4)}
@@ -46,26 +46,30 @@ func define_theme():
 	var tooltip_style = stylebox_flat({bg_color = primary, corners_ = corner_radius(4)})
 
 	# Panels & Containers
-	define_style(
-		"Panel", {"panel": inherit(pane, {corners_ = corner_radius(32)}), "focus": empty_focus}
-	)
+	define_style("Panel", {"panel": inherit(pane, {corners_ = corner_radius(32)})})
 	define_variant_style(
 		"bottom",
 		"Panel",
 		{
 			"panel":
-			inherit(pane, {corners_ = corner_radius(0, 0, 32, 32), bg_color = bg.darkened(.5)})
+			inherit(pane, {corners_ = corner_radius(0, 0, 32, 32), bg_color = bg.darkened(.3)})
 		}
 	)
-	define_style("PanelContainer", {"panel": pane, "focus": empty_focus})
-	define_style("ColorRect", {"panel": pane, "focus": empty_focus})
-	define_style("CenterContainer", {"panel": pane, "focus": empty_focus})
-	define_style("MarginContainer", {"panel": pane, "focus": empty_focus})
-	define_style("ScrollContainer", {"panel": pane, "focus": empty_focus, "scroll_bg": pane})
+	define_variant_style(
+		"top",
+		"Panel",
+		{
+			"panel":
+			inherit(pane, {corners_ = corner_radius(32, 32, 0, 0), bg_color = bg.darkened(.3)})
+		}
+	)
+	define_style("PanelContainer", {"panel": pane})
+
+	define_style("ScrollContainer", {"panel": pane, "focus": empty_focus})
 
 	# Text & Labels
 	define_style("Label", {"font_color": primary})
-	define_style("RichTextLabel", {"font_color": primary, "bb_enable": true})
+	define_style("RichTextLabel", {"default_color": primary})
 
 	# Buttons & Toggles
 	define_style(
@@ -75,12 +79,14 @@ func define_theme():
 			"hover": darkened,
 			"pressed": pressed,
 			"focus": empty_focus,
-			"font_color": primary
+			"font_color": primary,
+			"disabled":
+			inherit(outlined, {border_color = accent.darkened(0.5), bg_color = card.darkened(0.5)})
 		}
 	)
 	define_style(
 		"CheckBox",
-		{"box": outlined, "grabber": empty_focus, "check": check_style, "focus": empty_focus}
+		{"normal": outlined, "hover": darkened, "pressed": pressed, "focus": empty_focus}
 	)
 	define_style(
 		"RadioButton",
@@ -122,13 +128,15 @@ func define_theme():
 	define_style(
 		"TabContainer",
 		{
-			"tab_unselected": pane,
-			"tab_hover": darkened,
-			"tab_selected": pressed,
+			"side_margin": 0,
+			"tab_unselected": inherit(pane, {"corners_": corner_radius(8, 8, 0, 0)}),
+			"tab_hovered": inherit(outlined, {"corners_": corner_radius(8, 8, 0, 0)}),
+			"tab_selected": inherit(pressed, {"corners_": corner_radius(8, 8, 0, 0)}),
 			"tab_focus": empty_focus,
-			"panel": pane
+			"panel": inherit(pane, {corners_ = corner_radius(0, 8, 0)})
 		}
 	)
+
 	define_style("OptionButton", {"select": outlined, "popup": pane, "focus": empty_focus})
 	define_style(
 		"MenuButton",

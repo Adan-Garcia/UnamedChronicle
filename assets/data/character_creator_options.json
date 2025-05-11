@@ -9,7 +9,7 @@
 	"type":"Option",
 	"hint":"What are you? (Base class)",
 	"category":"Background"
-},
+  },
   "Strength": {
 	"type": "range",
 	"range": [0, 20],
@@ -42,7 +42,7 @@
   },
   "MaxMana": {
 	"type": "range",
-	"range": [0, 100],
+	"range": [0,20],
 	"hint": "How much magical energy can you hold?",
 	"category": "Core Attributes"
   },

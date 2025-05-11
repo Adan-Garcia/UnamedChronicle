@@ -2,6 +2,8 @@ extends VBoxContainer
 
 @export var category: String
 @export var Options: Dictionary
+@export var nodes: Dictionary[String,HBoxContainer]
+@export var filled: bool = false
 
 
 func _ready():
@@ -12,7 +14,7 @@ func _ready():
 			. get_as_text()
 		)
 	)
-
+	$"../../../..".categories[category] = self
 	for option in Options.keys():
 		if Options[option].category != category:
 			Options.erase(option)
@@ -30,9 +32,23 @@ func _ready():
 			node.slider_range = Options[option].range[1]
 		elif Options[option].type.to_lower() == "option":
 			node = load("res://src/ui/widgets/Option_Input.tscn").instantiate()
-			
+
 			if option == "Class":
 				node.connect("updated", $"../../../.."._base_class_update)
+		node.category = category
+		#if option != "Class":
+		#	node.connect("updated", $"../../../.."._node_updated)
 		node.name = option
+
 		$"../../../..".nodes[option] = node
+		nodes[option] = node
 		add_child(node)
+
+
+func _check_filled() -> bool:
+	var state: bool = true
+	for i in nodes.keys():
+		if !nodes[i].value:
+			state = false
+
+	return state

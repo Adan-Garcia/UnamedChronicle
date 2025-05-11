@@ -15,6 +15,7 @@ script = ExtResource("1_n01uv")
 [node name="Textbox" type="LineEdit" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
+max_length = 32
 caret_blink = true
 
 [node name="Submit" type="Button" parent="."]
@@ -22,3 +23,5 @@ custom_minimum_size = Vector2(28, 28)
 layout_mode = 2
 text = "⬆"
 icon_alignment = 1
+
+[connection signal="text_changed" from="Textbox" to="." method="_on_textbox_text_changed"]

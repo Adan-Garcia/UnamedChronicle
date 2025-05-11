@@ -22,7 +22,9 @@ Global="*res://src/systems/logic/global.tscn"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/size/viewport_width=1920
+window/size/viewport_height=1009
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/vsync/vsync_mode=0
 
