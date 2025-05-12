@@ -28,8 +28,8 @@ Instead, the world unfolds around you in real time, shaped by your choices and r
 
 ## Status
 
-The game is under active development and currently in the early prototype phase.  
-The main gameplay loop is functional with support for AI-assisted world simulation and storytelling.
+The game is under active development and currently in the early development phase.  
+The main gameplay loop is currently unfinished and in very early development.
 
 If you're interested in testing, collaborating, or just following the project, feel free to reach out.
 
