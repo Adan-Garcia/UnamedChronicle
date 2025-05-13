@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6p1tm3ysrf2w"]
+
+[ext_resource type="Script" uid="uid://bvx3paeb1n2p1" path="res://src/ui/scripts/adaptive_font_size.gd" id="1_ojie1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwwtu"]
+bg_color = Color(0.00974413, 0.0109286, 0.0158595, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cycc1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mwwtu")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 96
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"top"
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+theme_type_variation = &"bottom"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "hello "
+scroll_smooth = true
+caret_blink = true
+caret_mid_grapheme = true
+script = ExtResource("1_ojie1")
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_cycc1")
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "Send"

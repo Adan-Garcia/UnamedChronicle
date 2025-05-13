@@ -44,7 +44,7 @@ func _cap_scores(tester: String = "", value: int = 0) -> bool:
 	return false
 
 
-func _normalize_list(maximum: int, cur: int, property_count: int) -> int:
+func _normalize_property(maximum: int, cur: int, property_count: int) -> int:
 	return round(cur * (10 * property_count) / float(maximum))
 
 
@@ -90,7 +90,26 @@ func _process(_delta):
 
 
 func _on_next_pressed():
-	current_tab += 1
+	if current_tab == 3:
+		print("submit")
+		var normalized: Dictionary[String,int]
+
+		for category in categories.keys():
+			if category == "Background":
+				continue
+			for property in categories[category].nodes.keys():
+				normalized[property] = _normalize_property(
+					category_maxes[category],
+					categories[category].nodes[property].value,
+					categories[category].nodes.size()
+				)
+
+		var stats: PlayerData = PlayerData.new()
+		for i in normalized.keys():
+			stats.set(i, normalized[i])
+		ResourceSaver.save(stats, "user://PlayerStats%s.tres" % Time.get_unix_time_from_system())
+	else:
+		current_tab += 1
 
 
 func _on_back_pressed():

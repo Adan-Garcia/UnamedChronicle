@@ -56,17 +56,17 @@ func define_theme():
 		}
 	)
 	define_variant_style(
-		"top",
-		"Panel",
-		{
-			"panel":
-			inherit(pane, {corners_ = corner_radius(32, 32, 0, 0), bg_color = bg.darkened(.3)})
-		}
+		"top", "Panel", {"panel": inherit(pane, {corners_ = corner_radius(32, 32, 0, 0)})}
 	)
+	define_variant_style("Outlined", "Panel", {"panel": outlined})
 	define_style("PanelContainer", {"panel": pane})
 
 	define_style("ScrollContainer", {"panel": pane, "focus": empty_focus})
-
+	define_variant_style(
+		"outlined",
+		"ScrollContainer",
+		{"panel": inherit(outlined, {expand_ = expand_margins(8)}), "focus": empty_focus}
+	)
 	# Text & Labels
 	define_style("Label", {"font_color": primary})
 	define_style("RichTextLabel", {"default_color": primary})
