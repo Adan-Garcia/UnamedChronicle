@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6p1tm3ysrf2w"]
+[gd_scene load_steps=9 format=3 uid="uid://b6p1tm3ysrf2w"]
 
+[ext_resource type="Script" uid="uid://dcirmcmj5vn5l" path="res://src/ui/scripts/chat.gd" id="1_3a2n8"]
 [ext_resource type="Script" uid="uid://bvx3paeb1n2p1" path="res://src/ui/scripts/adaptive_font_size.gd" id="1_ojie1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwwtu"]
@@ -23,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3a2n8")
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 1
