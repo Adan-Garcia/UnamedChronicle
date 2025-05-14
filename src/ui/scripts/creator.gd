@@ -107,7 +107,12 @@ func _on_next_pressed():
 		var stats: PlayerData = PlayerData.new()
 		for i in normalized.keys():
 			stats.set(i, normalized[i])
-		ResourceSaver.save(stats, "user://PlayerStats%s.tres" % Time.get_unix_time_from_system())
+		stats.Name = categories["Background"].nodes["Name"].value
+		var player: Player = Player.new()
+		player.Data = stats
+		player.Name = stats.Name
+		ResourceSaver.save(player, "user://PlayerStats%s.tres" % Time.get_unix_time_from_system())
+		Global.Players.info[player.Name] = player
 	else:
 		current_tab += 1
 

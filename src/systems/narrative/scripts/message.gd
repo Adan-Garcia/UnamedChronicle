@@ -1,6 +1,6 @@
 @tool
 class_name message
-extends RichTextLabel
+extends HBoxContainer
 
 @export_category("Chat")
 @export var Name: String = ""
@@ -19,9 +19,12 @@ var grandparent: ScrollContainer
 
 func _ready():
 	# Enable BBCode parsing and allow focus for GUI input
-	bbcode_enabled = true
-	focus_mode = FocusMode.FOCUS_ALL
-	set_process_input(true)
+	$Message.bbcode_enabled = true
+	$Name.bbcode_enabled = true
+	$Name/TextEdit2.text = Name
+	$Message/TextEdit.text = Message
+	_update_message()
+	_update_min_size()
 
 
 func _update_message() -> void:
@@ -30,22 +33,8 @@ func _update_message() -> void:
 		grandparent = parent.get_parent()
 		grandparent.scroll_vertical = int(parent.size.y)
 	# Re-render with name and converted BBCode each frame
-	text = "[b]%s[/b]: %s" % [Name, custom_to_bbcode(Message)]
-
-
-func _gui_input(event: InputEvent) -> void:
-	# Capture key events to build Message string
-	if event is InputEventKey and event.pressed and not event.echo:
-		match event.keycode:
-			KEY_BACKSPACE:
-				if Message.length() > 0:
-					Message = Message.substr(0, Message.length() - 1)
-			KEY_ENTER, KEY_KP_ENTER:
-				Message += "\n"
-			_:
-				var c = event.unicode
-				if c >= 32:
-					Message += char(c)
+	$Message.text = custom_to_bbcode(Message)
+	$Name.text = "[b]%s[/b]: " % Name
 
 
 # Convert custom-style text to BBCode for RichTextLabel
@@ -60,11 +49,33 @@ func custom_to_bbcode(tex: String) -> String:
 	# Replace thoughts inside << >>
 	var thought = RegEx.new()
 	thought.compile("<<(.*?)>>")
-	converted = thought.sub(converted, "[i][color=#AAAAAA]$1[/color][/i]", true)
+	converted = thought.sub(converted, "[i][color=#AAAAAA]<<$1>>[/color][/i]", true)
 
 	# Optionally: replace actions inside *action* if you are using asterisk notation
 	var action = RegEx.new()
 	action.compile("\\*(.*?)\\*")
-	converted = action.sub(converted, "[color=#AAAAAA]$1[/color]", true)
+	converted = action.sub(converted, "[color=#AAAAAA]*$1*[/color]", true)
 
 	return converted
+
+
+func _on_text_edit_text_changed():
+	Message = $Message/TextEdit.text
+	_update_message()
+	_update_min_size()
+
+
+func _on_text_edit_2_text_changed():
+	Name = $Name/TextEdit2.text
+	_update_message()
+	_update_min_size()
+
+
+func _update_min_size():
+	var height = max($Name/TextEdit2.size.y, $Message/TextEdit.size.y)
+	$Name.custom_minimum_size.x = $Name/TextEdit2.size.x
+	$Name/TextEdit2.position.x = 0
+	$Name.update_minimum_size()
+
+	custom_minimum_size.y = height
+	update_minimum_size()

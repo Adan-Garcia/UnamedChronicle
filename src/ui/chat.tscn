@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6p1tm3ysrf2w"]
+[gd_scene load_steps=8 format=3 uid="uid://b6p1tm3ysrf2w"]
 
 [ext_resource type="Script" uid="uid://bvx3paeb1n2p1" path="res://src/ui/scripts/adaptive_font_size.gd" id="1_ojie1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwwtu"]
 bg_color = Color(0.00974413, 0.0109286, 0.0158595, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ojie1"]
+font_size = 32
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_81lmy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3a2n8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ojie1"]
 
@@ -42,13 +49,49 @@ theme_override_constants/margin_bottom = 64
 layout_mode = 2
 theme_override_constants/separation = -1
 
+[node name="Panel3" type="Panel" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(512, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wed 11/09/1801 2:00pm"
+label_settings = SubResource("LabelSettings_ojie1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_81lmy")
+
 [node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_type_variation = &"top"
 
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
 [node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 96)
+custom_minimum_size = Vector2(0, 96.03)
 layout_mode = 2
 theme_type_variation = &"bottom"
 
@@ -81,13 +124,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
+theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_bottom = 4
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer/HBoxContainer/Panel/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3a2n8")
 horizontal_scroll_mode = 3
 
 [node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer/HBoxContainer/Panel/MarginContainer/ScrollContainer"]
@@ -96,7 +140,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ojie1")
-text = "hello      fsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
 wrap_mode = 1
 autowrap_mode = 1
 scroll_fit_content_height = true

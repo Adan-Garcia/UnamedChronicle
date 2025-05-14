@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://4wag7q6654e7"]
+
+[ext_resource type="Script" uid="uid://cw6bcpdhi2u0w" path="res://src/ui/scripts/start.gd" id="1_upejg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuaor"]
+bg_color = Color(0.00974413, 0.0109286, 0.0158595, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_upejg")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tuaor")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="chatbutton" type="Button" parent="CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "Chat"

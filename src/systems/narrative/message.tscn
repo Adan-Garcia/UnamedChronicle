@@ -1,16 +1,63 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtuye304s4xr7"]
+[gd_scene load_steps=3 format=3 uid="uid://dtuye304s4xr7"]
 
 [ext_resource type="Script" uid="uid://bhbp4yld8on2x" path="res://src/systems/narrative/scripts/message.gd" id="1_d26o2"]
 
-[node name="Message" type="RichTextLabel"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kqxw8"]
+
+[node name="Message" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 2
-bbcode_enabled = true
-text = "[b][/b]: "
-fit_content = true
-scroll_active = false
 script = ExtResource("1_d26o2")
+Name = "Adan"
+
+[node name="Name" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+bbcode_enabled = true
+autowrap_mode = 0
+
+[node name="TextEdit2" type="TextEdit" parent="Name"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 44.0
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/selection_color = Color(0.387375, 0.280363, 0.0123829, 0.419608)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kqxw8")
+text = "Adan"
+scroll_fit_content_width = true
+caret_blink = true
+
+[node name="Message" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+
+[node name="TextEdit" type="TextEdit" parent="Message"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/selection_color = Color(0.387375, 0.280363, 0.0123829, 0.419608)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kqxw8")
+wrap_mode = 1
+scroll_fit_content_height = true
+caret_blink = true
+
+[connection signal="text_changed" from="Name/TextEdit2" to="." method="_on_text_edit_2_text_changed"]
+[connection signal="text_changed" from="Message/TextEdit" to="." method="_on_text_edit_text_changed"]
