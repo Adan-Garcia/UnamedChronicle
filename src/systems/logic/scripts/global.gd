@@ -47,6 +47,6 @@ func _get_time():
 	# 5) build the formatted string
 	var mm = String("%02d" % d.month)
 	var dd = String("%02d" % d.day)
-	var min = String("%02d" % d.minute)
+	var m = String("%02d" % d.minute)
 
-	return [WEEKDAYS[d.weekday], mm, dd, d.year, hour12, min, ampm]
+	return [WEEKDAYS[d.weekday], mm, dd, d.year, hour12, m, ampm]
