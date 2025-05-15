@@ -2,7 +2,6 @@ extends Node
 
 @export var CurrentWorldState: WorldState
 var tickcounter := 0.0
-var ticklength := 2
 
 
 func _ready():
@@ -11,7 +10,7 @@ func _ready():
 
 func _physics_process(delta):
 	tickcounter += delta
-	if tickcounter >= ticklength:
+	if tickcounter >= 1:
 		CurrentWorldState.current_time += 1
 		tickcounter = 0
 

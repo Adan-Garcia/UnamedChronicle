@@ -13,15 +13,7 @@ extends Node2D
 const ORIGIN_UNIX := 1704067200
 
 # our US-style weekday lookup
-const WEEKDAYS := {
-	0: "Sunday",
-	1: "Monday",
-	2: "Tuesday",
-	3: "Wednesday",
-	4: "Thursday",
-	5: "Friday",
-	6: "Saturday"
-}
+const WEEKDAYS := {0: "Sun", 1: "Mon", 2: "Tue", 3: "Wed", 4: "Thu", 5: "Fri", 6: "Sat"}
 
 
 func _ready():
@@ -35,13 +27,12 @@ func _ready():
 			for t in s.towns.values():
 				towns[t.name] = t
 
-	
 
 func _get_time():
 	var tick_seconds = Worldstate.CurrentWorldState.current_time
 
 	# 2) turn it into an actual Unix timestamp
-	var ts = ORIGIN_UNIX + tick_seconds
+	var ts = ORIGIN_UNIX + tick_seconds * 10
 
 	# 3) extract a Dictionary of date components in local time
 	var d = Time.get_datetime_dict_from_unix_time(ts)
