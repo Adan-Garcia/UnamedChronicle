@@ -1,6 +1,6 @@
 extends TextEdit
 var min_font_size: int = 24
-var font_size: int = 32.25
+var font_size: int = 32
 
 
 func _ready():

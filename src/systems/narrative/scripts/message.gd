@@ -4,12 +4,7 @@ extends HBoxContainer
 @export_category("Chat")
 @export var Name: String = ""
 @export_group("Time")
-@export var Day: int = 0
-@export var Month: int = 0
-@export var Year: int = 0
-@export var Hour: int = 0
-@export var Minute: int = 0
-
+@export var time: Array
 @export_group("")
 @export var Message: String = ""
 var parent: VBoxContainer

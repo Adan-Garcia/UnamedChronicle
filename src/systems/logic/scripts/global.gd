@@ -8,6 +8,9 @@ extends Node2D
 @export var towns: Dictionary[String,TownData]
 @export var sectors: Dictionary[String,SectorData]
 @export var empires: Dictionary[String,EmpireData]
+@export var PlayerID: String
+@export var PlayerName: String
+
 # Unix timestamp of your “base date” Y.
 # e.g. if Y is 2025-01-01 00:00 UTC then:
 const ORIGIN_UNIX := 1704067200

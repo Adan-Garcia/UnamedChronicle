@@ -1,6 +1,11 @@
 extends Node
 
 @export var CurrentWorldState: WorldState
+
+signal Tick(int)
+
+var tick: int
+
 var tickcounter := 0.0
 
 
@@ -13,6 +18,8 @@ func _physics_process(delta):
 	if tickcounter >= 1:
 		CurrentWorldState.current_time += 1
 		tickcounter = 0
+		tick = CurrentWorldState.current_time
+		Tick.emit(tick)
 
 
 func _intialize():

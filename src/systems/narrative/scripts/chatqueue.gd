@@ -1,29 +1,19 @@
 extends Node
 
-var ActionQueue: Array[Dictionary]
-
-var tick: int
-
-var ticklength: float = 2.5
-var counter: float
+var ActionQueue: Array[Action]
 
 
-func _physics_process(delta):
-	counter += delta
-	if counter >= ticklength:
-		tick += 1
-		send_queue()
+func input(raw: String):
+	var currentlocation: Address = Global.Players.info[Global.PlayerName].Location
 
-
-func input(raw: String, character: String):
-	var currentlocation: Address = Global.players.info[character].location
 	var timestamp = Time.get_ticks_msec()
 
 	var action = Action.new()
-	action.player_id = character
+	action.player_id = Global.PlayerID
+	action.player_name = Global.PlayerName
 	action.location = currentlocation
 	action.raw_input = raw
-	action.tick = tick
+	action.tick = Global.Worldstate.tick
 	action.timestamp = timestamp
 	ActionQueue.append(action)
 
