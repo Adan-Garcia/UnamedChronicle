@@ -19,8 +19,9 @@ func input(raw: String):
 	ActionQueue.append(action)
 
 
-func send_queue():
-	var queue = ActionQueue.duplicate()
-	for i in queue:
+func send_queue(_tick: int):
+	var queue: Array[Action] = ActionQueue.duplicate()
+	for i: Action in queue:
+		Global.AIManager.referee._judge(i)
+
 		ActionQueue.erase(i)
-	pass

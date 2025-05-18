@@ -1,6 +1,6 @@
 extends Node
 class_name Ai_Manager
-
+@onready var referee:Referee = $Referee
 @export var Models: Dictionary[String,AIModel]
 var threads := {}
 var _next_request_id: int = Time.get_ticks_msec()
@@ -13,7 +13,6 @@ signal stream_done(request_id: int, text: String)
 func _ready():
 	stream_chunk.connect(_on_stream_chunk)
 	stream_done.connect(_on_stream_done)
-	print(_generate("how are you", AIModel.new(), true))
 
 
 func _generate(prompt: String, model: AIModel, stream: bool) -> int:
@@ -23,13 +22,16 @@ func _generate(prompt: String, model: AIModel, stream: bool) -> int:
 	var thread = Thread.new()
 	threads[request_id] = thread
 	thread.start(_threaded_generate.bind(request_id, prompt, model, stream), Thread.PRIORITY_NORMAL)
-	_cleanup(request_id)
+	var cleaner = Thread.new()
+	cleaner.start(_cleanup.bind(request_id))
 	return request_id
 
 
-func _cleanup(request_id: int):
-	threads[request_id].wait_to_finish()
-	threads.erase(request_id)
+func _cleanup(request_id: int) -> void:
+	var worker: Thread = threads.get(request_id, null)
+	if worker:
+		worker.wait_to_finish()
+		threads.erase(request_id)
 
 
 func _threaded_generate(request_id, prompt_text: String, model: AIModel, stream: bool) -> void:
@@ -51,16 +53,17 @@ func _threaded_generate(request_id, prompt_text: String, model: AIModel, stream:
 		return
 	while client.get_status() == HTTPClient.STATUS_CONNECTING:
 		client.poll()
-		OS.delay_msec(20)
+		OS.delay_msec(5)
 	client.request(
 		HTTPClient.METHOD_POST, "/api/generate", ["Content-Type: application/json"], json_body
 	)
 	while client.get_status() == HTTPClient.STATUS_REQUESTING:
 		client.poll()
-		OS.delay_msec(20)
+		OS.delay_msec(5)
 	var buffer: String = ""
 	while client.get_status() == HTTPClient.STATUS_BODY:
 		client.poll()
+
 		var chunk = client.read_response_body_chunk()
 		if chunk.size() == 0:
 			continue

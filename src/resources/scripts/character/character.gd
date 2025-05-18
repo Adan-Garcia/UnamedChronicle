@@ -1,12 +1,10 @@
 extends Resource
 
 class_name Character
-@export_category("System Only")
 
 @export var Origin: Address
 @export var CurrentLocation: Address
 
-@export_category("Modifiable")
 @export var Name: String
 # Mana (only used by some, but reusable for magical entities)
 @export var Mana: int = 0
@@ -30,3 +28,40 @@ class_name Character
 @export var Tracking: int = 10
 @export var Tactics: int = 10
 @export var Perception: int = 10
+
+
+func _to_json(
+	obj: Object = self,
+	recurse_resources := true,
+	recurse_nodes := true,
+	skip_keys := ["script", "resource_name", "resource_local_to_scene"]
+) -> Dictionary:
+	var result := {}
+	if obj == null:
+		return result
+
+	var property_list = obj.get_property_list()
+	for prop in property_list:
+		var name = prop.name
+		var usage = prop.usage
+
+		# Skip keys we know are editor/system noise
+		if name in skip_keys:
+			continue
+
+		# Only export visible export vars
+		if not (usage & PROPERTY_USAGE_STORAGE != 0 and usage & PROPERTY_USAGE_EDITOR != 0):
+			continue
+
+		var value = obj.get(name)
+
+		# Recurse into Resources
+		if recurse_resources and value is Resource:
+			result[name] = _to_json(value, recurse_resources, recurse_nodes, skip_keys)
+		# Recurse into Nodes
+		elif recurse_nodes and value is Node:
+			result[name] = _to_json(value, recurse_resources, recurse_nodes, skip_keys)
+		else:
+			result[name] = value
+
+	return result

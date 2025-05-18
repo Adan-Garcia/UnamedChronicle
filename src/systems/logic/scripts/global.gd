@@ -1,10 +1,11 @@
 extends Node2D
 
-@onready var Worldstate := $WorldState
+@onready var Worldstate: worldstatemanager = $WorldState
 @onready var Cord: cordmanager = $Cord
 @onready var Data: data_graber = $Datagraber
 @onready var Queue: action_queue = $chatqueue
 @onready var Players: playermanager = $players
+@onready var AIManager: Ai_Manager = $Aimanager
 @export var towns: Dictionary[String,TownData]
 @export var sectors: Dictionary[String,SectorData]
 @export var empires: Dictionary[String,EmpireData]
@@ -23,6 +24,9 @@ func _ready():
 	await get_tree().process_frame
 
 	await get_tree().process_frame
+
+	Worldstate.connect("Tick", Queue.send_queue)
+
 	for e: EmpireData in Worldstate.CurrentWorldState.Empires.values():
 		empires[e.name] = e
 		for s: SectorData in e.Sectors.values():

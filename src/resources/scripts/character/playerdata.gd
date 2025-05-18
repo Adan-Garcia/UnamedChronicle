@@ -1,13 +1,13 @@
 extends Character
 class_name PlayerData
-@export_category("Modifiable")
+
 # Skills unique to players
 @export var Diplomacy: int = 10
 @export var Deception: int = 10
 @export var Insight: int = 10
 @export var Crafting: int = 0
 @export var Spellcasting: int = 0
-@export_category("System Only")
+
 # World interaction
 @export var KnownLocations: Array[Address] = []
 @export var Affiliations: Array[String] = []
