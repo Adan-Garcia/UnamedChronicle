@@ -1,4 +1,5 @@
 extends Node
+class_name data_graber
 
 
 func _get_empire(empire: String) -> EmpireData:

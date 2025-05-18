@@ -1,10 +1,10 @@
 extends Node2D
 
 @onready var Worldstate := $WorldState
-@onready var Cord := $Cord
-@onready var Data := $Datagraber
-@onready var Queue := $chatqueue
-@onready var Players := $players
+@onready var Cord: cordmanager = $Cord
+@onready var Data: data_graber = $Datagraber
+@onready var Queue: action_queue = $chatqueue
+@onready var Players: playermanager = $players
 @export var towns: Dictionary[String,TownData]
 @export var sectors: Dictionary[String,SectorData]
 @export var empires: Dictionary[String,EmpireData]

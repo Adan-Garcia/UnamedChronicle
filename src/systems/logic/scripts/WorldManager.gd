@@ -1,5 +1,5 @@
 extends Node
-
+class_name worldstatemanager
 @export var CurrentWorldState: WorldState
 
 signal Tick(int)

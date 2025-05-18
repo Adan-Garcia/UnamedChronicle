@@ -1,4 +1,5 @@
 extends Node
+class_name cordmanager
 
 const px_per_mile = 4
 const ft_per_mile = 5280

@@ -1,4 +1,5 @@
 extends Node
+class_name action_queue
 
 var ActionQueue: Array[Action]
 
