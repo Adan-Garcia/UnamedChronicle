@@ -12,7 +12,7 @@ class_name PlayerData
 @export var KnownLocations: Array[Address] = []
 @export var Affiliations: Array[String] = []
 @export var Reputation: Dictionary = {}
-
+@export var Memories: Dictionary = {}
 # Story flags and roleplay metadata
 @export var PersonalGoal: String = ""
 @export var Title: String = ""

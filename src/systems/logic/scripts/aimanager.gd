@@ -1,9 +1,12 @@
 extends Node
 class_name Ai_Manager
-@onready var referee:Referee = $Referee
+
+@onready var referee: Referee = $Referee
+@onready var Gamemaster: GameMaster = $GameMaster
+
 @export var Models: Dictionary[String,AIModel]
 var threads := {}
-var _next_request_id: int = Time.get_ticks_msec()
+
 @warning_ignore("unused_signal")
 signal stream_chunk(request_id: int, text: String)
 @warning_ignore("unused_signal")
@@ -15,23 +18,10 @@ func _ready():
 	stream_done.connect(_on_stream_done)
 
 
-func _generate(prompt: String, model: AIModel, stream: bool) -> int:
-	var request_id = _next_request_id
-	_next_request_id += 1
-
+func _generate(prompt: String, model: AIModel, id: int, stream: bool = false):
 	var thread = Thread.new()
-	threads[request_id] = thread
-	thread.start(_threaded_generate.bind(request_id, prompt, model, stream), Thread.PRIORITY_NORMAL)
-	var cleaner = Thread.new()
-	cleaner.start(_cleanup.bind(request_id))
-	return request_id
-
-
-func _cleanup(request_id: int) -> void:
-	var worker: Thread = threads.get(request_id, null)
-	if worker:
-		worker.wait_to_finish()
-		threads.erase(request_id)
+	threads[id] = thread
+	thread.start(_threaded_generate.bind(id, prompt, model, stream), Thread.PRIORITY_NORMAL)
 
 
 func _threaded_generate(request_id, prompt_text: String, model: AIModel, stream: bool) -> void:
@@ -82,10 +72,11 @@ func _threaded_generate(request_id, prompt_text: String, model: AIModel, stream:
 	# Clean up
 
 
-func _on_stream_chunk(request_id: int, text: String) -> void:
+func _on_stream_chunk(_request_id: int, _text: String) -> void:
 	# route to the right UI element, buffer, etc.
-	print("[", request_id, "]", text)
+	pass
 
 
-func _on_stream_done(request_id: int, text: String) -> void:
-	print("[", request_id, "]", text)
+func _on_stream_done(request_id: int, _text: String) -> void:
+	threads[request_id].wait_to_finish()
+	threads.erase(request_id)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6p1tm3ysrf2w"]
+[gd_scene load_steps=13 format=3 uid="uid://b6p1tm3ysrf2w"]
 
 [ext_resource type="Script" uid="uid://dcirmcmj5vn5l" path="res://src/ui/scripts/chat.gd" id="1_3a2n8"]
 [ext_resource type="Script" uid="uid://bvx3paeb1n2p1" path="res://src/ui/scripts/adaptive_font_size.gd" id="1_ojie1"]
+[ext_resource type="Script" uid="uid://u8pea6gjwp6g" path="res://src/ui/scripts/camera_2d.gd" id="2_81lmy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwwtu"]
 bg_color = Color(0.00974413, 0.0109286, 0.0158595, 1)
@@ -17,6 +18,81 @@ font_size = 32
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cycc1"]
 
+[sub_resource type="Animation" id="Animation_ph7og"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Panel2/MarginContainer/HBoxContainer/Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/Panel/ScrollContainer/MessageContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m2cip"]
+resource_name = "rejected"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Panel2/MarginContainer/HBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/Control/Camera2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1.0],
+"method": &"_impulse"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/VBoxContainer/Panel/ScrollContainer/MessageContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cyqpq"]
+_data = {
+&"RESET": SubResource("Animation_ph7og"),
+&"rejected": SubResource("Animation_m2cip")
+}
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -26,14 +102,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3a2n8")
 
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mwwtu")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer/Control"]
+script = ExtResource("2_81lmy")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -164,3 +256,8 @@ layout_mode = 2
 size_flags_stretch_ratio = 0.0
 theme_override_font_sizes/font_size = 24
 text = " Send "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cyqpq")
+}

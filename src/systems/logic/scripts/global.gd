@@ -6,6 +6,9 @@ extends Node2D
 @onready var Queue: action_queue = $chatqueue
 @onready var Players: playermanager = $players
 @onready var AIManager: Ai_Manager = $Aimanager
+@onready var Chronicler: chronicler = $Chronicler
+
+@onready var clientside: user_chat_manager
 @export var towns: Dictionary[String,TownData]
 @export var sectors: Dictionary[String,SectorData]
 @export var empires: Dictionary[String,EmpireData]
@@ -21,6 +24,7 @@ const WEEKDAYS := {0: "Sun", 1: "Mon", 2: "Tue", 3: "Wed", 4: "Thu", 5: "Fri", 6
 
 
 func _ready():
+	get_window().min_size = Vector2(1280, 720)
 	await get_tree().process_frame
 
 	await get_tree().process_frame

@@ -1,18 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://cirj05stuhm24"]
+[gd_scene load_steps=11 format=3 uid="uid://cirj05stuhm24"]
 
 [ext_resource type="Script" uid="uid://ceg75bk50ooxx" path="res://src/systems/logic/scripts/global.gd" id="1_nmxvb"]
-[ext_resource type="PackedScene" uid="uid://dnsc4173kuc87" path="res://src/systems/logic/Worldstate.tscn" id="2_opebo"]
+[ext_resource type="Script" uid="uid://85otop3g0ogm" path="res://src/systems/logic/scripts/WorldManager.gd" id="2_lkxld"]
 [ext_resource type="Script" uid="uid://52svm841cmfc" path="res://src/systems/logic/scripts/cord.gd" id="3_opebo"]
 [ext_resource type="Script" uid="uid://bmjwixyrfkaii" path="res://src/systems/logic/scripts/datagraber.gd" id="4_m3l3d"]
 [ext_resource type="Script" uid="uid://b8d1xwaik3pj8" path="res://src/systems/narrative/scripts/chatqueue.gd" id="5_nelfd"]
 [ext_resource type="Script" uid="uid://b117ur7llbbhl" path="res://src/systems/player/scripts/players.gd" id="6_6rlim"]
 [ext_resource type="Script" uid="uid://dawpox3rp8qqh" path="res://src/systems/logic/scripts/referee.gd" id="7_3easu"]
+[ext_resource type="Script" uid="uid://bydsnji2x2dec" path="res://src/systems/logic/scripts/chronicler.gd" id="7_lkxld"]
 [ext_resource type="Script" uid="uid://c2cnbx1mca7qm" path="res://src/systems/logic/scripts/aimanager.gd" id="7_xowr7"]
+[ext_resource type="Script" uid="uid://dpc1o2uing6uc" path="res://src/systems/logic/scripts/gamemaster.gd" id="9_k4jtq"]
 
 [node name="Global" type="Node2D"]
 script = ExtResource("1_nmxvb")
 
-[node name="WorldState" parent="." instance=ExtResource("2_opebo")]
+[node name="WorldState" type="Node" parent="."]
+script = ExtResource("2_lkxld")
 
 [node name="Cord" type="Node" parent="."]
 script = ExtResource("3_opebo")
@@ -27,9 +30,13 @@ script = ExtResource("5_nelfd")
 script = ExtResource("6_6rlim")
 
 [node name="Chronicler" type="Node" parent="."]
+script = ExtResource("7_lkxld")
 
 [node name="Aimanager" type="Node" parent="."]
 script = ExtResource("7_xowr7")
 
 [node name="Referee" type="Node" parent="Aimanager"]
 script = ExtResource("7_3easu")
+
+[node name="GameMaster" type="Node" parent="Aimanager"]
+script = ExtResource("9_k4jtq")

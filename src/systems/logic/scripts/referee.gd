@@ -1,92 +1,26 @@
 extends Node
 class_name Referee
 
+signal approved(id)
+signal rejected(id)
 
-func _judge(action: Action):
-	var promptarray: Array[String] = []
 
-	# Referee persona and logic instructions
-	(
-		promptarray
-		. append(
-			"You are Referee-001, a deterministic AI referee for a text-based fantasy roleplaying game. Your job is to evaluate a player's action using their stats and resources, and return only the outcome, stat_changes, and a brief description. You do not create story content or move the plot forward."
-		)
-	)
-	(
-		promptarray
-		. append(
-			"All stats range from 0 (no skill) to 20 (elite mastery). A score of 10 represents the average capable adventurer. Use this range to scale action difficulty."
-		)
-	)
-	promptarray.append("OUTCOMES:")
-	promptarray.append("success: The action is fully effective.")
-	promptarray.append("partial_success: The action mostly works, but with drawbacks or tension.")
-	promptarray.append("failure: The action fails, usually with consequences.")
-	promptarray.append("impossible: The action cannot happen with current stats/resources.")
+func _ready():
+	await get_tree().process_frame
+	Global.AIManager.connect("stream_done", ValidateAction)
 
-	promptarray.append("JUDGMENT PRINCIPLES:")
-	promptarray.append(
-		"- Physical actions (climbing, combat) depend on Strength, Agility, Stealth, Melee."
-	)
-	promptarray.append("- Social actions depend on Charisma, Deception, Diplomacy.")
-	promptarray.append("- Spellcasting requires both Spellcasting stat and Mana.")
-	(
-		promptarray
-		. append(
-			"- A stat of 15+ is needed for exceptional tasks. A stat of 10 should allow for common tasks to succeed partially or fully depending on difficulty."
-		)
-	)
-	promptarray.append("- Failure does not always mean death; use wounds, suspicion, or setbacks.")
-	(
-		promptarray
-		. append(
-			"- Do not allow vague actions like 'kill the king' unless there's a detailed plan and sufficient stats."
-		)
-	)
-	promptarray.append("Examples:")
-	promptarray.append(
-		"Action: 'Kill the king in his throne room' → Melee: 10, Stealth: 8 → Outcome: impossible"
-	)
-	promptarray.append(
-		"Action: 'Kill a sleeping bandit' → Melee: 18, Stealth: 17 → Outcome: success"
-	)
-	(
-		promptarray
-		. append(
-			(
-				"Only the following stats may be changed in stat_changes:\n"
-				+ "- Energy\n"
-				+ "- Mana\n"
-				+ "- Health\n"
-				+ "Do not modify core attributes like Charisma, Strength, Intelligence, or skills such as Melee, Stealth, or Diplomacy"
-			)
-		)
-	)
-	promptarray.append("ENERGY USE:")
-	promptarray.append("- Use 0-0.01 for light actions (talking, small sneaking)")
-	promptarray.append("- Use 2–3 for moderate exertion (climbing, running)")
-	promptarray.append("- Use 4–5 for intense effort (combat, spellcasting)")
-	promptarray.append("- Reduce Energy accordingly in stat_changes")
 
-	# Player data
-	promptarray.append("Here is the player's profile and current state (all stats are 0–20):")
+func _judge(action: Action, id: int):
+	var prompt: String
+
+	var personafile: bool = FileAccess.file_exists("res://assets/data/personas/core/referee.txt")
+	if !personafile:
+		push_error("failed to load referee")
+		return -1
 	var player_data = Global.Players.info[action.player_name].Data._to_json()
-	promptarray.append(str(player_data))
-
-	# Player action
-	promptarray.append("Here is the player’s intended action:")
-	promptarray.append(action.raw_input)
-
-	# Instruction summary
-	promptarray.append("Return only valid JSON in the following format:")
-	(
-		promptarray
-		. append(
-			'{ "outcome": "success | partial_success | failure | impossible", "stat_changes": { "StatName": delta }, "description": "What happened and why" }'
-		)
-	)
-	promptarray.append(
-		"Do NOT include markdown or extra text. Only respond with a valid JSON object."
+	prompt = (
+		FileAccess.get_file_as_string("res://assets/data/personas/core/referee.txt")
+		% [player_data, action.raw_input]
 	)
 
 	# AI model setup
@@ -95,8 +29,7 @@ func _judge(action: Action):
 		"type": "object",
 		"properties":
 		{
-			"outcome":
-			{"type": "string", "enum": ["success", "partial_success", "failure", "impossible"]},
+			"outcome": {"type": "string", "enum": ["approved", "rejected"]},
 			"stat_changes":
 			{
 				"type": "object",
@@ -110,9 +43,20 @@ func _judge(action: Action):
 			},
 			"description": {"type": "string"}
 		},
-		"required": ["outcome", "stat_changes", "description"]
+		"required": ["outcome", "description"]
 	}
 	ref.extras["temperature"] = 0.1
 	ref.Name = "hf.co/MaziyarPanahi/Phi-3.5-mini-instruct-GGUF:Q4_K_M"
 
-	Global.AIManager._generate("\n".join(promptarray), ref, false)
+	Global.AIManager._generate(prompt, ref, id)
+
+
+func ValidateAction(request_id: int, text: String):
+	if request_id in Global.Queue.binds:
+		var dict = str_to_var(text)
+		if dict["outcome"] != "rejected":
+			emit_signal("approved", request_id)
+			Global.AIManager.Gamemaster._continue(Global.Queue.binds[request_id])
+		else:
+			emit_signal("rejected", request_id)
+			print(dict)

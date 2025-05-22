@@ -1,10 +1,16 @@
 extends Node
 class_name action_queue
 
-var ActionQueue: Array[Action]
+var ActionQueue: Dictionary[int,Action]
+
+var binds: Dictionary[int,Action]
 
 
-func input(raw: String):
+func _ready():
+	await get_tree().process_frame
+
+
+func input(raw: String) -> int:
 	var currentlocation: Address = Global.Players.info[Global.PlayerName].Location
 
 	var timestamp = Time.get_ticks_msec()
@@ -16,12 +22,15 @@ func input(raw: String):
 	action.raw_input = raw
 	action.tick = Global.Worldstate.tick
 	action.timestamp = timestamp
-	ActionQueue.append(action)
+	var id = Time.get_ticks_msec()
+	ActionQueue[id] = action
+
+	return id
 
 
 func send_queue(_tick: int):
-	var queue: Array[Action] = ActionQueue.duplicate()
-	for i: Action in queue:
-		Global.AIManager.referee._judge(i)
-
+	var queue: Dictionary[int,Action] = ActionQueue.duplicate()
+	for i: int in queue.keys():
+		Global.AIManager.referee._judge(queue[i], i)
+		binds[i] = queue[i]
 		ActionQueue.erase(i)

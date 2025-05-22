@@ -2,11 +2,19 @@ extends TextEdit
 var min_font_size: int = 24
 var font_size: int = 32
 
+signal submit
+
 
 func _ready():
-	text_changed.connect(_changed)
 	add_theme_font_size_override("font_size", font_size)
 	caret_changed.connect(_scroll)
+
+
+func _input(event):
+	if event is InputEventKey:
+		_changed()
+		if event.keycode == 4194309 and event.pressed:
+			submit.emit()
 
 
 func _scroll():
