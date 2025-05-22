@@ -3,3 +3,7 @@
 .venv/
 .conda/
 .vscode/
+.__pycache__/
+*.pyc
+*.sh
+*.index
