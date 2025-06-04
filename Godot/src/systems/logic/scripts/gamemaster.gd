@@ -10,7 +10,7 @@ func _ready():
 	Global.AIManager.stream_chunk.connect(_on_stream_chunk)
 
 
-func _continue(action: Action):
+func _continue(_action: Action):
 	var prompt: String
 
 	var personafile: bool = FileAccess.file_exists("res://assets/data/personas/core/GameMaster.txt")
@@ -19,17 +19,19 @@ func _continue(action: Action):
 		return
 	prompt = (
 		FileAccess.get_file_as_string("res://assets/data/personas/core/GameMaster.txt")
-		% [
-			"%s %s/%s/%04d %d:%s %s" % Global._get_time(),
-			Global.Worldstate.CurrentWorldState.chat_queue,
-			action
-		]
+		% [Global.PlayerName, "%s %s/%s/%04d %d:%s %s" % Global._get_time(), Global.Memory.ChatLogs]
 	)
-	var ref = AIModel.new()
+	var master = AIModel.new()
 	print(prompt)
-	ref.extras["temperature"] = 1.2
-	ref.Name = "hf.co/DavidAU/Llama-3.2-8X3B-MOE-Dark-Champion-Instruct-uncensored-abliterated-18.4B-GGUF:Q4_K_M"
-	ref.extras["format"] = {
+	master.extras["temperature"] = 0.9  # Allows more creative, less predictable output
+	master.extras["top_p"] = 0.95  # Nucleus sampling: consider top tokens whose combined prob ≤ 0.9
+	master.extras["presence_penalty"] = 0.6  # Penalizes repeating themes or ideas
+	master.extras["frequency_penalty"] = 0.4  # Penalizes exact word repetitions
+	master.extras["repetition_penalty"] = 1.15  # Custom penalty — not OpenAI native, but some models accept it
+	master.extras["stop"] = ["Adan:"]  # Optional: Stops before generating player lines
+	master.extras["mirostat"] = 1
+	master.Name = "hf.co/bartowski/Cydonia-22B-v1.2-GGUF:Q4_K_M"
+	master.extras["format"] = {
 		"type": "object",
 		"properties":
 		{
@@ -47,12 +49,14 @@ func _continue(action: Action):
 		"required": ["messages"]
 	}
 	id = Time.get_ticks_msec() * 10
-	Global.AIManager._generate(prompt, ref, Time.get_ticks_msec() * 10)
+	Global.AIManager._generate(prompt, master, Time.get_ticks_msec() * 10)
 
 
 func _on_stream_chunk(request_id: int, text: String) -> void:
 	if request_id == id:
 		var messagesraw = str_to_var(text)["messages"]
+		print("RESPONSE")
 		for msg in messagesraw:
 			Global.clientside._new_message(msg["role"], msg["content"])
+			print(msg["role"] + ": " + msg["content"])
 		Global.clientside._finish_thinking()

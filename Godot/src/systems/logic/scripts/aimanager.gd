@@ -3,6 +3,7 @@ class_name Ai_Manager
 
 @onready var referee: Referee = $Referee
 @onready var Gamemaster: GameMaster = $GameMaster
+@onready var Summerizer: summerizer = $Summerizer
 
 @export var Models: Dictionary[String,AIModel]
 var threads := {}

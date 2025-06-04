@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cirj05stuhm24"]
+[gd_scene load_steps=13 format=3 uid="uid://cirj05stuhm24"]
 
 [ext_resource type="Script" uid="uid://ceg75bk50ooxx" path="res://src/systems/logic/scripts/global.gd" id="1_nmxvb"]
 [ext_resource type="Script" uid="uid://85otop3g0ogm" path="res://src/systems/logic/scripts/WorldManager.gd" id="2_lkxld"]
@@ -9,7 +9,9 @@
 [ext_resource type="Script" uid="uid://dawpox3rp8qqh" path="res://src/systems/logic/scripts/referee.gd" id="7_3easu"]
 [ext_resource type="Script" uid="uid://bydsnji2x2dec" path="res://src/systems/logic/scripts/chronicler.gd" id="7_lkxld"]
 [ext_resource type="Script" uid="uid://c2cnbx1mca7qm" path="res://src/systems/logic/scripts/aimanager.gd" id="7_xowr7"]
-[ext_resource type="Script" uid="uid://dpc1o2uing6uc" path="res://src/systems/logic/scripts/gamemaster.gd" id="9_k4jtq"]
+[ext_resource type="Script" uid="uid://ddbewnsjujnid" path="res://src/systems/logic/scripts/summerizer.gd" id="10_u3ahl"]
+[ext_resource type="Script" uid="uid://dpc1o2uing6uc" path="res://src/systems/logic/scripts/gamemaster.gd" id="10_uwvy7"]
+[ext_resource type="Script" uid="uid://r2llu4llf22s" path="res://src/systems/logic/scripts/memory.gd" id="11_u3ahl"]
 
 [node name="Global" type="Node2D"]
 script = ExtResource("1_nmxvb")
@@ -39,4 +41,10 @@ script = ExtResource("7_xowr7")
 script = ExtResource("7_3easu")
 
 [node name="GameMaster" type="Node" parent="Aimanager"]
-script = ExtResource("9_k4jtq")
+script = ExtResource("10_uwvy7")
+
+[node name="Summerizer" type="Node" parent="Aimanager"]
+script = ExtResource("10_u3ahl")
+
+[node name="Memory" type="Node" parent="."]
+script = ExtResource("11_u3ahl")

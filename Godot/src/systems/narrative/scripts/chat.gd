@@ -99,8 +99,7 @@ func _on_generated(data) -> void:
 	generator.new_messages.append(
 		{"name": generator.character, "content": post_process_message(data)}
 	)
-	print(post_process_message(data))
-	print(post_process_message(data))
+
 	pre_message = current_message
 	current_message = message_scene.instantiate()
 	generating = false

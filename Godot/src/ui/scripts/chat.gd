@@ -18,6 +18,7 @@ func _ready():
 	User_Input.connect("submit", _submit)
 	await get_tree().process_frame
 	Global.clientside = self
+	Global.Memory._pull_save()
 	Global.AIManager.referee.connect("approved", _approved)
 	Global.AIManager.referee.connect("rejected", _rejected)
 
@@ -27,7 +28,10 @@ func _approved(id: int):
 		return
 
 	MessageContainer.add_child(pend[id])
-	Global.Worldstate.CurrentWorldState.chat_queue.append({pend[id].Name: pend[id].Message})
+
+	Global.Memory._add(pend[id].Name, pend[id].Message)
+	await get_tree().process_frame
+	$%MessageContainer.get_parent().scroll_vertical = $%MessageContainer.size.y
 
 
 func _rejected(id: int):
@@ -39,7 +43,6 @@ func _rejected(id: int):
 
 
 func _submit():
-	
 	if User_Input.text:
 		var Message = MessageScene.instantiate()
 		pend = {Global.Queue.input(User_Input.text): Message}
@@ -53,16 +56,22 @@ func _new_message(
 	role: String,
 	content: String,
 	pending: bool = false,
-	Message: message = MessageScene.instantiate()
+	Message: message = MessageScene.instantiate(),
+	save: bool = true
 ):
+	if Message is not message:
+		Message = MessageScene.instantiate()
 	Message.Name = role
 	Message.time = Global._get_time()
 	Message.Message = content
 
 	if !pending:
 		MessageContainer.add_child(Message)
-		Global.Worldstate.CurrentWorldState.chat_queue.append({role: content})
-		
+		if save:
+			Global.Memory._add(role, content)
+	await get_tree().process_frame
+	$%MessageContainer.get_parent().scroll_vertical = $%MessageContainer.size.y
+
 
 func _finish_thinking():
 	thinking = false

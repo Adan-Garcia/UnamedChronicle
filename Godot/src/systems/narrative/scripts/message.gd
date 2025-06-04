@@ -69,7 +69,7 @@ func _on_text_edit_2_text_changed():
 func _update_min_size():
 	$Message/TextEdit.update_minimum_size()
 	$Name/TextEdit2.update_minimum_size()
-	var height = ceil(Message.length() / 118.0) * 22
+	var height = ceil(Message.length() / 118.0) * 24
 	$Name.custom_minimum_size.x = (Name.length() + 2) * 14 * 0.613162
 	$Name/TextEdit2.position.x = 0
 	$Name.update_minimum_size()

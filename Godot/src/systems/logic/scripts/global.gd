@@ -7,6 +7,7 @@ extends Node2D
 @onready var Players: playermanager = $players
 @onready var AIManager: Ai_Manager = $Aimanager
 @onready var Chronicler: chronicler = $Chronicler
+@onready var Memory: MemoryClass = $Memory
 
 @onready var clientside: user_chat_manager
 @export var towns: Dictionary[String,TownData]
@@ -15,9 +16,10 @@ extends Node2D
 @export var PlayerID: String
 @export var PlayerName: String
 
-# Unix timestamp of your “base date” Y.
-# e.g. if Y is 2025-01-01 00:00 UTC then:
-const ORIGIN_UNIX := 1704067200
+var ORIGIN_UNIX: int = Time.get_unix_time_from_datetime_string(
+	Time.get_datetime_string_from_system()
+)
+#-14831769600 + 43200
 
 # our US-style weekday lookup
 const WEEKDAYS := {0: "Sun", 1: "Mon", 2: "Tue", 3: "Wed", 4: "Thu", 5: "Fri", 6: "Sat"}
