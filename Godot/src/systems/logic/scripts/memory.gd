@@ -4,11 +4,43 @@ class_name MemoryClass
 @export var RAWChatlogs: Array[Dictionary]
 @export var Summeries: Array[Dictionary]
 @export var ChatLogs: String
-var summery_interval: int = 15
+var summery_interval: int = 1500
 
 
 func _ready():
 	$"../Aimanager/Summerizer".connect("done", summery_done)
+
+
+func remember(log: Dictionary):
+	pass
+
+
+func memorize(log: Dictionary, timestamp: String):
+	var http = HTTPRequest.new()
+	add_child(http)
+	var url = "http://127.0.0.1:8000/add"  # Replace with your actual FastAPI URL
+	if !log.get("listeners", []):
+		return
+	var payload = {
+		"text": log.get("content", ""),
+		"listener_ids": log.get("listeners", []),
+		"timestamp": timestamp
+	}
+
+	var json_body = JSON.stringify(payload)
+	print(log.get("listeners", []))
+	http.connect("request_completed", Callable(self, "_on_memorize_response"))
+	var err = http.request(url, [], HTTPClient.METHOD_POST, json_body)
+	if err != OK:
+		print("HTTP request failed with error: ", err)
+
+
+func _on_memorize_response(result, response_code, headers, body):
+	if response_code == 200 or response_code == 201:
+		print("Memory saved successfully:", body.get_string_from_utf8())
+
+	else:
+		print("Failed to save memory. Status:", response_code, "Body:", body.get_string_from_utf8())
 
 
 func _pull_save():

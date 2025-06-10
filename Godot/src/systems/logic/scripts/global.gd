@@ -45,7 +45,7 @@ func _get_time():
 	var tick_seconds = Worldstate.CurrentWorldState.current_time
 
 	# 2) turn it into an actual Unix timestamp
-	var ts = ORIGIN_UNIX + tick_seconds * 10
+	var ts = ORIGIN_UNIX + tick_seconds
 
 	# 3) extract a Dictionary of date components in local time
 	var d = Time.get_datetime_dict_from_unix_time(ts)

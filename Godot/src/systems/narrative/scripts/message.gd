@@ -9,14 +9,19 @@ extends HBoxContainer
 @export var Message: String = ""
 var parent: VBoxContainer
 var grandparent: ScrollContainer
+var editable: bool = false
 
 
 func _ready():
 	# Enable BBCode parsing and allow focus for GUI input
 	$Message.bbcode_enabled = true
 	$Name.bbcode_enabled = true
-	$Name/TextEdit2.text = Name
-	$Message/TextEdit.text = Message
+	if editable:
+		$Name/TextEdit2.text = Name
+		$Message/TextEdit.text = Message
+	else:
+		$Name/TextEdit2.queue_free()
+		$Message/TextEdit.queue_free()
 	_update_message()
 
 	_update_min_size()
@@ -67,11 +72,13 @@ func _on_text_edit_2_text_changed():
 
 
 func _update_min_size():
-	$Message/TextEdit.update_minimum_size()
-	$Name/TextEdit2.update_minimum_size()
+	if editable:
+		$Message/TextEdit.update_minimum_size()
+		$Name/TextEdit2.update_minimum_size()
 	var height = ceil(Message.length() / 118.0) * 24
 	$Name.custom_minimum_size.x = (Name.length() + 2) * 14 * 0.613162
-	$Name/TextEdit2.position.x = 0
+	if editable:
+		$Name/TextEdit2.position.x = 0
 	$Name.update_minimum_size()
 
 	custom_minimum_size.y = height

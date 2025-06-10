@@ -36,6 +36,7 @@ script = ExtResource("7_lkxld")
 
 [node name="Aimanager" type="Node" parent="."]
 script = ExtResource("7_xowr7")
+Models = null
 
 [node name="Referee" type="Node" parent="Aimanager"]
 script = ExtResource("7_3easu")

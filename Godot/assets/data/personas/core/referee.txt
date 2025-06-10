@@ -25,10 +25,9 @@ ENERGY USE:
 - Use 2–3 for moderate exertion (climbing, running)
 - Use 4–5 for intense effort (combat, spellcasting)
 - Reduce Energy accordingly in stat_changes
-Here is the player's profile and current state (all stats are 0–20):
-%s
-Here is the player’s intended action:
-%s
+The user will provide its stats and current state (all stats are 0–20)
+The user will provide their intended action as well
+
 Return only valid JSON in the following format:
 The outcome can weither be apporved or rejected with only things deamed impossible should be marked as rejected
 { "outcome": "approved | rejected", "stat_changes": { "StatName": delta }, "description": "What happened and why" }

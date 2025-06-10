@@ -50,6 +50,11 @@ func _submit():
 		%TextBox.editable = false
 		$%Submit.disabled = true
 		_new_message(Global.PlayerName, User_Input.text, true, Message)
+	else:
+		Global.AIManager.Gamemaster._continue()
+		thinking = true
+		%TextBox.editable = false
+		$%Submit.disabled = true
 
 
 func _new_message(

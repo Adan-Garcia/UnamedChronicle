@@ -19,11 +19,9 @@ func summerize(chatlogs: Array[Dictionary], index: int):
 	if !personafile:
 		push_error("failed to load Summerizer")
 		return
-	prompt = (
-		FileAccess.get_file_as_string("res://assets/data/personas/core/Summerizer.txt") % [chatlogs]
-	)
+	prompt = FileAccess.get_file_as_string("res://assets/data/personas/core/Summerizer.txt")
 	var ref = AIModel.new()
-
+	var messages = [{"role": "system", "content": prompt}, {"role": "user", "content": chatlogs}]
 	ref.extras["temperature"] = 1.2
 	ref.Name = "hf.co/mradermacher/Llama-3.2-3B-Instruct-uncensored-GGUF:Q4_K_M"
 	ref.extras["format"] = {
@@ -31,7 +29,7 @@ func summerize(chatlogs: Array[Dictionary], index: int):
 	}
 	var id = Time.get_ticks_msec() * 100
 	ids[id] = index
-	Global.AIManager._generate(prompt, ref, id)
+	Global.AIManager._generate(messages, ref, id)
 
 
 func _on_stream_done(request_id: int, text: String) -> void:
