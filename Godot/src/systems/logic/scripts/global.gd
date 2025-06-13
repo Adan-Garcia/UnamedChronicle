@@ -63,3 +63,7 @@ func _get_time():
 	var m = String("%02d" % d.minute)
 
 	return [WEEKDAYS[d.weekday], mm, dd, d.year, hour12, m, ampm]
+
+
+func _get_time_string()->String:
+	return "%s %s/%s/%04d %d:%s %s" % Global._get_time()

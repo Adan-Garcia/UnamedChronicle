@@ -58,7 +58,7 @@ func ValidateAction(request_id: int, text: String):
 		if dict["outcome"] != "rejected":
 			emit_signal("approved", request_id)
 			Global.AIManager.Gamemaster._continue()
-		
+
 		else:
 			emit_signal("rejected", request_id)
 			print(dict)

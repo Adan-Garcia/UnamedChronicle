@@ -7,4 +7,5 @@
 *.pyc
 *.sh
 *.index
+*.meta.json
 *.tmp

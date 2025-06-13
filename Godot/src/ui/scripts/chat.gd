@@ -29,7 +29,7 @@ func _approved(id: int):
 
 	MessageContainer.add_child(pend[id])
 
-	Global.Memory._add(pend[id].Name, pend[id].Message)
+	Global.Memory.memorize(pend[id].Name, pend[id].Message)
 	await get_tree().process_frame
 	$%MessageContainer.get_parent().scroll_vertical = $%MessageContainer.size.y
 
@@ -87,4 +87,4 @@ func _finish_thinking():
 
 func _physics_process(_delta):
 	# 1) get your raw tick
-	label.text = "%s %s/%s/%04d %d:%s %s" % Global._get_time()
+	label.text = Global._get_time_string()

@@ -18,9 +18,11 @@ func _continue():
 		return
 
 	var system_prompt := FileAccess.get_file_as_string(persona_path).strip_edges()
-	print(Global.Memory.remember(Global.Memory.RAWChatlogs.back()))
+
 	# Build system prompt with time and player name substitutions
-	var time_str := "%s %s/%s/%04d %d:%s %s" % Global._get_time()
+	var time_str: String = Global._get_time_string()
+	Global.Memory.remember(Global.Memory.RAWChatlogs.back(), Global._get_time())
+	print("prompt:" + str(await Global.Memory.remember_done))
 	system_prompt = system_prompt % [Global.PlayerName, time_str]
 
 	var messages: Array[Dictionary] = [
@@ -78,9 +80,9 @@ func _continue():
 func _on_stream_chunk(request_id: int, msg: Dictionary) -> void:
 	if request_id == id:
 		Global.clientside._new_message(msg["role"], msg["content"])
-		Global.Memory.memorize(msg, "%s %s/%s/%04d %d:%s %s" % Global._get_time())
+		Global.Memory.memorize(msg, Global._get_time_string())
 
 
-func _on_stream_done(request_id: int, text: String) -> void:
+func _on_stream_done(request_id: int, _text: String) -> void:
 	if request_id == id:
 		Global.clientside._finish_thinking()

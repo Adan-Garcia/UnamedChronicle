@@ -15,7 +15,7 @@ class MemoryItem(BaseModel):
 
 class QueryRequest(BaseModel):
     query: str
-    top_k: int = 5
+    top_k: Optional[int] = 5
     listener_ids: List[str]
     time_range: Optional[List[str]] = None
 
@@ -27,11 +27,11 @@ def add_entry(item: MemoryItem):
 
 @app.post("/query")
 def query_entries(q: QueryRequest):
-    results = retrieve(q.query, q.top_k, q.time_range, q.listener_ids)
+    results = retrieve(q.query, q.top_k, q.listener_ids)
     if not results:
         raise HTTPException(status_code=404, detail="No relevant memories found")
     return {"results": results}
-
+    
 @app.get("/all/{listener_id}")
 def all_entries(listener_id: str):
     return get_all_metadata(listener_id)
