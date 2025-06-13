@@ -75,7 +75,7 @@ func _threaded_remember(mlog: Dictionary, timestamp: Array) -> void:
 		response += chunk.get_string_from_utf8()
 	if !response:
 			return
-	var result: Array[Dictionary] = str_to_var(response).results
+	var result: Array = str_to_var(response).results
 	print(result)
 	for mem:int in result.size():
 		result[mem].erase("id")

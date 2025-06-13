@@ -29,7 +29,7 @@ func _approved(id: int):
 
 	MessageContainer.add_child(pend[id])
 
-	Global.Memory.memorize(pend[id].Name, pend[id].Message)
+	Global.Memory._add(pend[id].Name, pend[id].Message)
 	await get_tree().process_frame
 	$%MessageContainer.get_parent().scroll_vertical = $%MessageContainer.size.y
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cirj05stuhm24"]
+[gd_scene load_steps=13 format=3 uid="uid://b3vsqkkmiswib"]
 
 [ext_resource type="Script" uid="uid://ceg75bk50ooxx" path="res://src/systems/logic/scripts/global.gd" id="1_nmxvb"]
 [ext_resource type="Script" uid="uid://85otop3g0ogm" path="res://src/systems/logic/scripts/WorldManager.gd" id="2_lkxld"]
@@ -36,7 +36,6 @@ script = ExtResource("7_lkxld")
 
 [node name="Aimanager" type="Node" parent="."]
 script = ExtResource("7_xowr7")
-Models = null
 
 [node name="Referee" type="Node" parent="Aimanager"]
 script = ExtResource("7_3easu")
