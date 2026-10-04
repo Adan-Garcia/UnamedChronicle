@@ -13,7 +13,8 @@ func _ready():
 func _input(event):
 	if event is InputEventKey:
 		_changed()
-		if event.keycode == 4194309 and event.pressed:
+		if event.keycode == KEY_ENTER and event.pressed and has_focus() and not event.shift_pressed:
+			get_viewport().set_input_as_handled()
 			submit.emit()
 
 

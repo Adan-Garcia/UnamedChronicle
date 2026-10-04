@@ -15,6 +15,10 @@ extends Node2D
 @export var PlayerID: String
 @export var PlayerName: String
 
+## Energy regained every REST_TICKS ticks of world time.
+const REST_TICKS := 60
+const REST_AMOUNT := 0.5
+
 # Unix timestamp of your “base date” Y.
 # e.g. if Y is 2025-01-01 00:00 UTC then:
 const ORIGIN_UNIX := 1704067200
@@ -30,6 +34,7 @@ func _ready():
 	await get_tree().process_frame
 
 	Worldstate.connect("Tick", Queue.send_queue)
+	Worldstate.connect("Tick", _on_tick)
 
 	for e: EmpireData in Worldstate.CurrentWorldState.Empires.values():
 		empires[e.name] = e
@@ -37,6 +42,28 @@ func _ready():
 			sectors[s.name] = s
 			for t in s.towns.values():
 				towns[t.name] = t
+
+
+func _on_tick(tick: int) -> void:
+	if tick % REST_TICKS == 0 and PlayerName in Players.info:
+		Players.rest(PlayerName, REST_AMOUNT)
+
+
+## Where new characters begin: the first capital town in the world.
+func default_location() -> Address:
+	var fallback: Address = null
+	for e: EmpireData in Worldstate.CurrentWorldState.Empires.values():
+		for s: SectorData in e.Sectors.values():
+			for t: TownData in s.towns.values():
+				var address := Address.new()
+				address.Empire = e.name
+				address.Province = s.name
+				address.Town = t.name
+				if t.IsCapital:
+					return address
+				if fallback == null:
+					fallback = address
+	return fallback if fallback else Address.new()
 
 
 func _get_time():

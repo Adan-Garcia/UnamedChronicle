@@ -31,8 +31,16 @@ Each response should populate the "messages" array with one or more objects, eac
 Do not include any extra keys or formatting—only the JSON object as defined above.
 Do not include past messages only the new ones
 Current time is: %s
-Heres the current chat log: 
-	%s 
+The player's character is %s, currently in %s.
 
-And heres the users last action:
+Here is the recent chat log (oldest first):
+%s
+
+Here is the player's latest action:
 	%s
+
+The impartial Referee has already judged this action. Its verdict is final and your narration must honor it:
+	Outcome: %s
+	Effects on the character: %s
+	Notes: %s
+Success means the action works; partial_success means it works with a cost or complication; failure means it is attempted but goes wrong.

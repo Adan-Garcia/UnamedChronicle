@@ -28,10 +28,43 @@ Instead, the world unfolds around you in real time, shaped by your choices and r
 
 ## Status
 
-The game is under active development and currently in the early development phase.  
-The main gameplay loop is currently unfinished and in very early development.
+The core gameplay loop is playable:
 
-If you're interested in testing, collaborating, or just following the project, feel free to reach out.
+1. **Create a character** in the character creator (stats are saved to `user://`).
+2. **Type an action** in the chat. Actions are queued and judged on the next world tick.
+3. **The Referee judges it** using **Jev**, a typed decision model. Jev answers four questions about the action
+   (outcome, energy cost, injury, mana cost) with calibrated probabilities. Only *impossible* actions are rejected;
+   success, partial success and failure are all narrated. Energy, Health and Mana change accordingly.
+4. **The GameMaster narrates** how the world reacts, honoring the Referee's verdict.
+5. **The Chronicler records everything** and, every few events, writes a new chapter of the world's history.
+
+Everything persists between sessions: the world and its chat log (`user://world.res`), your character
+(`user://PlayerStats*.tres`), the raw event log (`user://chatlog.json`) and the chronicle
+(`user://chronicle.json`, readable as `user://chronicle.md`).
+
+In-game commands: `/stats`, `/chronicle`, `/help`.
+
+---
+
+## Running It
+
+Requires **Godot 4.4** and locally served AI models.
+
+| Role | Kind of model | Default |
+|------|---------------|---------|
+| Referee | **Jev** decision model (TypeSafe System One) | `jev` at `http://127.0.0.1:11435/api/decide` |
+| Referee fallback | Text LLM, used only if Jev is unreachable | Phi-3.5 mini via Ollama |
+| GameMaster | Text LLM | Llama 3.2 MoE via Ollama |
+| Chronicler | Text LLM | `llama3.1` via Ollama |
+
+All of this is configured in [`assets/data/ai/ai_config.json`](assets/data/ai/ai_config.json). To override settings
+without touching the repo, put a partial copy at `user://ai_config.json`; its keys are merged per section.
+
+**Pointing Jev somewhere else:**
+- *Local (Ollaya / Ollama):* keep `"path": "/api/decide"` and set `endpoint` and `model` (e.g. an open Jev-style
+  model such as `nimble` or `tev1`) to whatever your server runs.
+- *Hosted TypeSafe:* set `endpoint` to the API base URL (`https://...`), `"path": "/v1/systemone"`, and export your
+  key in the environment variable named by `api_key_env` (default `TYPESAFE_API_KEY`).
 
 ---
 

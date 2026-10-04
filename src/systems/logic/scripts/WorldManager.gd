@@ -1,8 +1,14 @@
 extends Node
 class_name worldstatemanager
+
+const SAVE_PATH := "user://world.res"
+const AUTOSAVE_TICKS := 30
+
 @export var CurrentWorldState: WorldState
 
 signal Tick(int)
+## Emitted for every message that becomes part of the shared world log.
+signal message_added(role: String, content: String)
 
 var tick: int
 
@@ -13,6 +19,11 @@ func _ready():
 	_intialize()
 
 
+func _notification(what):
+	if what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_EXIT_TREE:
+		save_world()
+
+
 func _physics_process(delta):
 	tickcounter += delta
 	if tickcounter >= 1:
@@ -20,6 +31,8 @@ func _physics_process(delta):
 		tickcounter = 0
 		tick = CurrentWorldState.current_time
 		Tick.emit(tick)
+		if tick % AUTOSAVE_TICKS == 0:
+			save_world()
 
 
 func _intialize():
@@ -27,11 +40,37 @@ func _intialize():
 
 
 func gather_saves():
-	if !FileAccess.file_exists("res://src/resources/world.res"):
+	if FileAccess.file_exists(SAVE_PATH):
+		CurrentWorldState = load(SAVE_PATH)
+	if CurrentWorldState == null:
 		_create_world()
+	tick = CurrentWorldState.current_time
 
-	else:
-		CurrentWorldState = load("res://src/resources/world.res")
+
+func save_world() -> void:
+	if CurrentWorldState == null:
+		return
+	var err := ResourceSaver.save(CurrentWorldState, SAVE_PATH)
+	if err != OK:
+		push_error("Failed to save world (%d)" % err)
+
+
+## Append a message to the persistent world log, the chronicle and any listening UI.
+func add_message(role: String, content: String) -> void:
+	CurrentWorldState.chat_queue.append({role: content})
+	message_added.emit(role, content)
+	if Global.Chronicler:
+		Global.Chronicler.record(role, content)
+
+
+## The last `count` messages as "Name: content" lines, oldest first.
+func recent_messages(count: int) -> String:
+	var lines := PackedStringArray()
+	var history := CurrentWorldState.chat_queue
+	for entry in history.slice(max(0, history.size() - count)):
+		for role in entry.keys():
+			lines.append("%s: %s" % [role, entry[role]])
+	return "\n".join(lines)
 
 
 func _create_world():
@@ -43,7 +82,7 @@ func _create_world():
 	for empire in dict["Empires"]:
 		World.Empires[empire["name"]] = _dict_to_empire(empire, dict["EmpireList"])
 	CurrentWorldState = World
-	ResourceSaver.save(CurrentWorldState, "res://src/resources/world.res")
+	save_world()
 
 
 func _dict_to_empire(dict: Dictionary, list: Array) -> EmpireData:

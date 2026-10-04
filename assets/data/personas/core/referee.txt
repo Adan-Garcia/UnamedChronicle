@@ -30,6 +30,6 @@ Here is the player's profile and current state (all stats are 0–20):
 Here is the player’s intended action:
 %s
 Return only valid JSON in the following format:
-The outcome can weither be apporved or rejected with only things deamed impossible should be marked as rejected
-{ "outcome": "approved | rejected", "stat_changes": { "StatName": delta }, "description": "What happened and why" }
+{ "outcome": "success | partial_success | failure | impossible", "stat_changes": { "StatName": delta }, "description": "What happened and why" }
+Only actions that truly cannot happen should be marked impossible; impossible actions are rejected and never narrated.
 Do NOT include markdown or extra text. Only respond with a valid JSON object.

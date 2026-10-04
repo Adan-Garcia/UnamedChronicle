@@ -91,7 +91,6 @@ func _process(_delta):
 
 func _on_next_pressed():
 	if current_tab == 3:
-		print("submit")
 		var normalized: Dictionary[String,int]
 
 		for category in categories.keys():
@@ -107,12 +106,21 @@ func _on_next_pressed():
 		var stats: PlayerData = PlayerData.new()
 		for i in normalized.keys():
 			stats.set(i, normalized[i])
+		stats.Mana = normalized.get("MaxMana", 0)
 		stats.Name = categories["Background"].nodes["Name"].value
 		var player: Player = Player.new()
 		player.Data = stats
 		player.Name = stats.Name
-		ResourceSaver.save(player, "user://PlayerStats%s.tres" % Time.get_unix_time_from_system())
-		Global.Players.info[player.Name] = player
+		player.Location = Global.default_location()
+		stats.CurrentLocation = player.Location
+		stats.Origin = player.Location
+		var file_name := "PlayerStats%s.tres" % Time.get_unix_time_from_system()
+		var path := "user://%s" % file_name
+		ResourceSaver.save(player, path)
+		Global.Players.register(player, path)
+		Global.PlayerName = player.Name
+		Global.PlayerID = file_name.sha256_text()
+		get_tree().change_scene_to_file("res://src/ui/chat.tscn")
 	else:
 		current_tab += 1
 

@@ -1,0 +1,27 @@
+{
+	"decision": {
+		"_comment": "Jev decision model (TypeSafe System One). Local: run Ollaya (default port 11435) or Ollama with a Jev-style model. Hosted TypeSafe: set endpoint to the API base URL, path to /v1/systemone and export TYPESAFE_API_KEY.",
+		"endpoint": "http://127.0.0.1:11435",
+		"path": "/api/decide",
+		"model": "jev",
+		"api_key_env": "TYPESAFE_API_KEY",
+		"keep_alive": "10m"
+	},
+	"referee_fallback": {
+		"_comment": "Text LLM used to judge actions only when the Jev decision model is unreachable.",
+		"endpoint": "http://127.0.0.1:11434",
+		"model": "hf.co/MaziyarPanahi/Phi-3.5-mini-instruct-GGUF:Q4_K_M",
+		"temperature": 0.1
+	},
+	"gamemaster": {
+		"endpoint": "http://127.0.0.1:11434",
+		"model": "hf.co/DavidAU/Llama-3.2-8X3B-MOE-Dark-Champion-Instruct-uncensored-abliterated-18.4B-GGUF:Q4_K_M",
+		"temperature": 1.2
+	},
+	"chronicler": {
+		"endpoint": "http://127.0.0.1:11434",
+		"model": "llama3.1",
+		"temperature": 0.8,
+		"events_per_chapter": 8
+	}
+}
